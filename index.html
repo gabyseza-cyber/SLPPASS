@@ -112,23 +112,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 /* ── FORM ── */
 .signup-wrap{max-width:480px}
 .form-group{display:flex;gap:0}
-.form-input{flex:1;padding:14px 18px;background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.2);border-right:none;color:#fff;
-  font-family:'Lato',sans-serif;font-size:15px;outline:none}
-.form-input::placeholder{color:rgba(255,255,255,.35)}
-.form-input:focus{border-color:var(--gd);background:rgba(255,255,255,.12)}
-.form-input.error{border-color:var(--rd)!important;background:rgba(184,50,50,.1)!important}
 .form-btn{padding:14px 22px;background:var(--gd);border:none;color:#0e1820;
   font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;
   letter-spacing:2px;text-transform:uppercase;cursor:pointer;white-space:nowrap;
   transition:background .2s}
 .form-btn:hover{background:#c8a020}
 .form-note{font-size:13px;color:rgba(255,255,255,.45);margin-top:10px;letter-spacing:.2px;line-height:1.5}
-.form-success{display:none;background:rgba(77,107,58,.2);border:1px solid rgba(77,107,58,.4);
-  border-left:4px solid var(--gd);padding:16px 20px;max-width:480px;margin-top:4px}
-.form-success-title{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;
-  color:var(--gd);letter-spacing:1px;margin-bottom:4px}
-.form-success-txt{font-size:13px;color:rgba(255,255,255,.6);line-height:1.5}
 
 /* ── AUTORIDAD ── */
 .authority{background:var(--old);padding:60px 5vw}
@@ -260,50 +249,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .now-card-features li::before{content:'✓';color:var(--gd);font-weight:700;flex-shrink:0}
 @media(max-width:900px){.now-inner{grid-template-columns:1fr}}
 
-/* ── PRICING ── */
-.pricing{background:var(--bg);padding:72px 5vw}
-.pricing .section-h2{text-align:center}
-.pricing .section-label{justify-content:center}
-.price-intro{font-size:16px;color:var(--txd);text-align:center;max-width:560px;
-  margin:0 auto 40px;font-weight:300;line-height:1.75}
-.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:24px}
-.price-card{border:1px solid var(--bdr);padding:32px 26px;
-  background:var(--wh);position:relative}
-.price-card.featured{border-color:var(--ol);border-width:2px;
-  box-shadow:0 8px 32px rgba(77,107,58,.14)}
-.price-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);
-  background:var(--ol);color:#fff;padding:3px 16px;
-  font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:2px;white-space:nowrap}
-.price-label{font-family:'Share Tech Mono',monospace;font-size:10px;
-  letter-spacing:3px;color:var(--txd);text-transform:uppercase;margin-bottom:14px}
-.price-amount{font-family:'Rajdhani',sans-serif;font-size:48px;font-weight:700;
-  color:var(--txb);line-height:1}
-.price-period{font-size:13px;color:var(--txd);margin-bottom:6px}
-.price-save{font-size:13px;color:var(--ol);font-weight:700;margin-bottom:22px;min-height:20px}
-.price-features{list-style:none;margin-bottom:24px}
-.price-feature{display:flex;align-items:flex-start;gap:10px;padding:7px 0;
-  border-bottom:1px solid var(--bdr);font-size:13px;color:var(--tx)}
-.price-feature:last-child{border-bottom:none}
-.price-feature::before{content:'✓';color:var(--ol);font-weight:700;flex-shrink:0;margin-top:1px}
-.price-btn{display:block;width:100%;padding:12px;background:var(--ol);color:#fff;
-  border:none;font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;
-  letter-spacing:2px;text-transform:uppercase;cursor:pointer;
-  text-decoration:none;transition:background .2s;text-align:center}
-.price-btn:hover{background:var(--old)}
-.price-btn.secondary{background:transparent;border:1.5px solid var(--ol);color:var(--ol)}
-.price-btn.secondary:hover{background:var(--oll)}
-.price-speaking{background:var(--lt);border:1px solid var(--bdr);
-  padding:24px 28px;max-width:500px}
-.price-speaking-title{font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;
-  color:var(--txb);letter-spacing:1px;margin-bottom:8px}
-.price-speaking-txt{font-size:14px;color:var(--txd);margin-bottom:14px;
-  line-height:1.7;text-align:left}
-.price-speaking-btn{display:inline-block;padding:9px 22px;background:transparent;
-  border:1.5px solid var(--ol);color:var(--ol);font-family:'Rajdhani',sans-serif;
-  font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
-  text-decoration:none;cursor:pointer;transition:all .2s}
-.price-speaking-btn:hover{background:var(--oll)}
-.price-note{font-size:13px;color:var(--txd);margin-top:16px}
 
 /* ── CTA FINAL ── */
 .cta-final{background:#0e1820;padding:96px 5vw;text-align:center;
@@ -321,13 +266,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
   font-weight:300;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.75}
 .cta-form{display:flex;max-width:480px;margin:0 auto 12px;gap:0}
 .cta-note{font-size:13px;color:rgba(255,255,255,.4);letter-spacing:.2px;line-height:1.5}
-.cta-success{display:none;max-width:480px;margin:12px auto 0;
-  background:rgba(77,107,58,.2);border:1px solid rgba(77,107,58,.4);
-  border-left:4px solid var(--gd);padding:16px 20px}
-.cta-success-title{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;
-  color:var(--gd);letter-spacing:1px;margin-bottom:4px;text-align:left}
-.cta-success-txt{font-size:13px;color:rgba(255,255,255,.6);
-  line-height:1.5;text-align:left}
 
 /* ── FOOTER ── */
 footer{background:var(--txb);padding:40px 5vw;text-align:center}
@@ -350,8 +288,6 @@ footer{background:var(--txb);padding:40px 5vw;text-align:center}
   .whatsapp-cta{width:100%;font-size:13px;line-height:1.35;padding:14px 16px;text-align:center}
   .hero-inner{padding:72px 5vw 56px}
   .form-group,.cta-form{flex-direction:column}
-  .form-input{border-right:1px solid rgba(255,255,255,.2)}
-  .cta-form .form-input{border-right:1px solid rgba(255,255,255,.2)}
   nav{padding:0 4vw}
   .hero-h1{font-size:clamp(34px,9vw,48px);line-height:1.02}
   .hero-sub{font-size:16px;line-height:1.65;text-align:left;margin-bottom:28px}
@@ -384,7 +320,7 @@ footer{background:var(--txb);padding:40px 5vw;text-align:center}
       <div class="nav-sub">STANAG 6001 · NATO</div>
     </div>
   </div>
-  <a href="https://calendly.com/slppass/30min" target="_blank" class="nav-cta">VER MI NIVEL REAL</a>
+  <a href="#diagnostico" class="nav-cta">COMPROBAR MI NIVEL</a>
 </nav>
 
 <!-- ── HERO ──────────────────────────────────────────────────────────────── -->
@@ -394,32 +330,31 @@ footer{background:var(--txb);padding:40px 5vw;text-align:center}
   <div class="hero-inner">
     <div class="hero-label">Preparación STANAG 6001</div>
     <h1 class="hero-h1">
-Consigue el SLP.<br>
-No falles por no entender el examen.
+¿Aprobarías hoy el SLP 2.2.2.2?<br>
+Descúbrelo antes del examen.
     </h1>
     <p class="hero-sub">
-La mayoría no suspende por inglés. Suspende porque no entiende cómo evalúa el examinador.
-Aquí entrenas exactamente bajo esos criterios.
+Haz el diagnóstico real y descubre si hoy estarías en nivel de aprobado o si todavía tienes errores que te dejarían fuera del perfil que necesitas.
     </p>
     <div class="hero-cred-bar">
-      <span class="hero-cred-item">+15 años evaluando SLP 2222</span>
+      <span class="hero-cred-item">+15 años evaluando candidatos reales SLP</span>
       <div class="hero-cred-sep"></div>
       <span class="hero-cred-item">Evaluador acreditado STANAG 6001 (ET)</span>
       <div class="hero-cred-sep"></div>
-      <span class="hero-cred-item">Formación UK · Perfil SLP 4343</span>
+      <span class="hero-cred-item">Perfil SLP 4343</span>
     </div>
     <div id="registro"></div>
 <div class="signup-wrap">
   <div class="form-group">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYLbohOyS6zs62Yb529tI4qt9W2ZXJexTVGGDnebVEsRx-0w/viewform" target="_blank" style="display:flex; width:100%; text-decoration:none;">
+    <a href="#diagnostico" style="display:flex; width:100%; text-decoration:none;">
       <button class="form-btn" type="button" style="width:100%;">
-        VER MI NIVEL REAL AHORA
+        COMPROBAR MI NIVEL AHORA
       </button>
     </a>
   </div>
 
   <div class="form-note">
-    Sin tarjeta de crédito · Te avisamos cuando abramos el acceso.
+    Haz el diagnóstico y descubre si hoy aprobarías o no el SLP.
   </div>
 </div>
 </section>
@@ -433,12 +368,12 @@ Aquí entrenas exactamente bajo esos criterios.
         <span class="auth-cred-line">Perfil SLP 4343 · En activo</span>
       </div>
       <p class="auth-txt">
-        He evaluado durante más de 15 años candidatos en SLP 2222.
-        Sé exactamente qué hace que alguien suba o baje de nivel.
+        Evaluador con más de 15 años de experiencia en SLP 2222.
+        Conocimiento directo de los criterios reales de evaluación.
       </p>
       <p class="auth-txt">
-        Eso no se enseña en academias.
-        Porque no están dentro del sistema de evaluación.
+        Aquí no se enseña inglés genérico.
+        Aquí se trabaja exactamente lo que decide si subes o no de nivel.
       </p>
     </div>
     <div class="auth-quote">
@@ -525,8 +460,8 @@ RSVP: cpl.ross@campeagle.mil</div>
           <p class="sample-cta-txt">
             Esto es solo una muestra. Dentro de SLP PASS tienes preparación completa en formato real para Reading, Listening, Writing y Speaking.
           </p>
-          <button class="sample-cta-btn" onclick="scrollToSection('registro')">
-            APUNTARME AL ACCESO ANTICIPADO →
+          <button class="sample-cta-btn" onclick="scrollToSection('diagnostico')">
+            HACER EL DIAGNÓSTICO COMPLETO →
           </button>
         </div>
       </div>
@@ -568,10 +503,10 @@ RSVP: cpl.ross@campeagle.mil</div>
   </div>
 </section>
 <!-- ── DIAGNÓSTICO RÁPIDO ───────────────────────────────────────────── -->
-<section class="diagnostic">
+<section class="diagnostic" id="diagnostico">
   <div class="section-inner">
     <div class="section-label">Diagnóstico</div>
-    <h2 class="section-h2">Comprueba tu nivel en 30 segundos.</h2>
+    <h2 class="section-h2">Haz el diagnóstico y descubre si hoy aprobarías.</h2>
 
     <div class="sample-card">
       <div class="sample-question">
@@ -617,16 +552,12 @@ At what time will the briefing actually take place?
   <button class="diag-opt" data-q="q2" data-value="2">09:30</button>
   <button class="diag-opt" data-q="q2" data-value="0">10:00</button>
 </div>
-        <!-- GRAMMAR -->
-        <div class="sample-q" style="margin-top:20px">3. Choose the correct option:</div>
-        <div class="sample-text" style="margin-bottom:10px">
-By the time the convoy reached the border, the lead vehicle ______ a mechanical failure.
-        </div>
-
+        <!-- COMPREHENSION -->
+        <div class="sample-q" style="margin-top:20px">3. What is the purpose of the briefing?</div>
         <div class="sample-options">
-          <button class="diag-opt" data-q="q3" data-value="0">suffered</button>
-          <button class="diag-opt" data-q="q3" data-value="2">had suffered</button>
-          <button class="diag-opt" data-q="q3" data-value="0">has suffered</button>
+          <button class="diag-opt" data-q="q3" data-value="0">Routine meeting</button>
+          <button class="diag-opt" data-q="q3" data-value="2">Pre-deployment preparation</button>
+          <button class="diag-opt" data-q="q3" data-value="0">Administrative update</button>
         </div>
 
         <!-- SPEAKING -->
@@ -649,7 +580,7 @@ By the time the convoy reached the border, the lead vehicle ______ a mechanical 
         <!-- RESULTADO -->
 <div class="sample-feedback" id="diagResult" style="display:none">
 
-  <div class="sample-feedback-title" id="diagTitle"></div>
+  <div class="sample-feedback-title" id="diagTitle">Probabilidad de aprobado: --</div>
 
   <div class="sample-feedback-txt" id="diagText"></div>
 
@@ -658,8 +589,8 @@ By the time the convoy reached the border, the lead vehicle ______ a mechanical 
     Depende de cómo respondes bajo criterios reales de evaluación.
   </div>
 
-  <div style="margin-top:20px; font-size:15px; font-weight:600">
-    Si tuvieras el examen mañana, ¿sabrías exactamente qué espera el evaluador?
+  <div style="margin-top:20px; font-size:15px; font-weight:700; color:#1a2630; line-height:1.6">
+    Si tuvieras el examen mañana, lo arriesgarías todo a una impresión o preferirías saber exactamente dónde perderías nivel.
   </div>
 
   <a href="https://calendly.com/slppass/30min"
@@ -675,7 +606,12 @@ By the time the convoy reached the border, the lead vehicle ______ a mechanical 
        text-decoration:none;
        letter-spacing:1px;
      ">
-    RESERVAR SESIÓN Y SABER TU NIVEL REAL — 35€
+    RESERVAR AUDITORÍA DE PERFIL — 35€
+  </a>
+
+  <a href="https://wa.me/34620581881?text=Hola,%20he%20hecho%20el%20diagn%C3%B3stico%20de%20SLP%20PASS%20y%20quiero%20resolver%20una%20duda%20antes%20de%20reservar" target="_blank"
+     style="display:block; margin-top:12px; padding:14px; border:1.5px solid #4d6b3a; color:#4d6b3a; text-align:center; font-weight:700; text-decoration:none; letter-spacing:1px; background:transparent;">
+    RESOLVER DUDA RÁPIDA POR WHATSAPP
   </a>
 
 </div>
@@ -690,12 +626,10 @@ By the time the convoy reached the border, the lead vehicle ______ a mechanical 
     <div>
       <div class="section-label">Disponible ahora</div>
       <h2 class="section-h2" style="margin-bottom:16px">
-        Puedes empezar ya.<br>Con una sesión directa con el evaluador.
+        Si no quieres llegar a ciegas al examen,<br>haz una auditoría real de tu perfil.
       </h2>
       <p class="now-txt">
-        Mientras el acceso completo a SLP PASS está en preparación,
-        puedes reservar una sesión individual de 30 minutos con el evaluador.
-        Sin suscripción. Sin material previo necesario.
+        En 30 minutos sabrás cuál es tu nivel real, qué te está penalizando y qué tendrías que corregir para acercarte al perfil que necesitas. Sin suscripción. Sin perder semanas preparándote a ciegas.
       </p>
       <ul class="now-list">
         <li>Diagnóstico real de tu nivel actual</li>
@@ -739,15 +673,15 @@ By the time the convoy reached the border, the lead vehicle ______ a mechanical 
 <section class="cta-final" id="cta-final">
   <div class="cta-bg-grid"></div>
   <div class="cta-inner">
-    <h2 class="cta-h2">Apúntate.<br><span>Te avisamos cuando abramos.</span></h2>
+    <h2 class="cta-h2">¿Quieres acceso prioritario?<br><span>Te avisamos cuando abramos la plataforma.</span></h2>
     <p class="cta-sub">
-      Deja tu email y te avisaremos cuando esté disponible el acceso.
-      Sin tarjeta de crédito. Sin compromiso ahora.
+      Si quieres acceso prioritario cuando abramos la plataforma completa,
+      apúntate aquí. Sin tarjeta de crédito. Sin compromiso ahora.
     </p>
     <div class="cta-form" id="ctaFormGroup">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYLbohOyS6zs62Yb529tI4qt9W2ZXJexTVGGDnebVEsRx-0w/viewform" target="_blank" style="display:flex; width:100%; text-decoration:none;">
         <button class="form-btn" type="button" style="width:100%;">
-          VER MI NIVEL REAL AHORA
+          APUNTARME AL ACCESO ANTICIPADO
         </button>
       </a>
     </div>
@@ -844,7 +778,7 @@ if ('IntersectionObserver' in window) {
     });
   }, { threshold: 0.08 });
 
-  document.querySelectorAll('.how-block, .price-card, .auth-quote').forEach(function(el) {
+  document.querySelectorAll('.how-block, .auth-quote').forEach(function(el) {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity .5s ease, transform .5s ease';
@@ -884,17 +818,17 @@ document.getElementById('diagBtn').addEventListener('click', function() {
   var text = document.getElementById('diagText');
 
   if (score <= 2) {
-    title.textContent = 'Base insuficiente para SLP 1';
-    text.textContent = 'Tu problema no es solo el inglés. Es comprensión, estructura y capacidad de respuesta. En este estado, el examen es muy difícil de superar.';
+    title.textContent = 'Probabilidad de aprobado: 20%';
+    text.textContent = 'Si tuvieras el examen mañana, lo más probable es que no alcanzaras el nivel exigido. Tu riesgo principal está en comprensión, estructura y capacidad de respuesta bajo criterios reales de evaluación.';
   } else if (score <= 5) {
-    title.textContent = 'Perfil probable SLP 1';
-    text.textContent = 'Tienes base, pero el examen oral y la comprensión pueden penalizarte. El problema no es solo el nivel, es cómo respondes.';
+    title.textContent = 'Probabilidad de aprobado: 45%';
+    text.textContent = 'Tienes base, pero hoy seguirías con un riesgo alto de quedarte corto. El problema no es solo tu inglés: es cómo respondes en el formato real del examen y qué errores te penalizan.';
   } else if (score <= 7) {
-    title.textContent = 'Cerca de SLP 2, pero con riesgo';
-    text.textContent = 'Puedes estar cerca, pero aún puedes perder nivel por falta de precisión y estructura. Aquí es donde la mayoría falla.';
+    title.textContent = 'Probabilidad de aprobado: 65%';
+    text.textContent = 'Estás cerca, pero todavía puedes perder nivel por falta de precisión, estructura o comprensión específica. Este es el punto en el que muchos candidatos creen que aprueban y fallan.';
   } else {
-    title.textContent = 'Base sólida, pero no garantizada';
-    text.textContent = 'Tienes buen nivel, pero el examen no se aprueba solo con inglés. Se aprueba sabiendo exactamente qué espera el evaluador.';
+    title.textContent = 'Probabilidad de aprobado: 80%';
+    text.textContent = 'Tu base es sólida, pero ni siquiera este resultado garantiza el aprobado. El SLP no se supera solo con buen inglés: se supera sabiendo exactamente qué espera el evaluador en cada fase.';
   }
 
   document.getElementById('diagResult').style.display = 'block';
