@@ -308,6 +308,14 @@ footer{background:var(--txb);padding:40px 5vw;text-align:center}
   .form-btn{font-size:13px;letter-spacing:1.4px;white-space:normal;line-height:1.35;padding:14px 16px}
 }
 </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPJ367DRKD"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);} 
+  gtag('js', new Date());
+  gtag('config', 'G-VPJ367DRKD');
+  </script>
 </head>
 <body>
 
@@ -595,6 +603,7 @@ At what time will the briefing actually take place?
 
   <a href="https://calendly.com/slppass/30min"
      target="_blank"
+     onclick="gtag('event','click_calendly',{location:'diagnostico'});"
      style="
        display:block;
        margin-top:20px;
@@ -609,7 +618,9 @@ At what time will the briefing actually take place?
     RESERVAR AUDITORÍA DE PERFIL — 35€
   </a>
 
-  <a href="https://wa.me/34620581881?text=Hola,%20he%20hecho%20el%20diagn%C3%B3stico%20de%20SLP%20PASS%20y%20quiero%20resolver%20una%20duda%20antes%20de%20reservar" target="_blank"
+  <a href="https://wa.me/34620581881?text=Hola,%20he%20hecho%20el%20diagn%C3%B3stico%20de%20SLP%20PASS%20y%20quiero%20resolver%20una%20duda%20antes%20de%20reservar"
+     target="_blank"
+     onclick="gtag('event','click_whatsapp',{location:'diagnostico'});"
      style="display:block; margin-top:12px; padding:14px; border:1.5px solid #4d6b3a; color:#4d6b3a; text-align:center; font-weight:700; text-decoration:none; letter-spacing:1px; background:transparent;">
     RESOLVER DUDA RÁPIDA POR WHATSAPP
   </a>
@@ -637,12 +648,15 @@ At what time will the briefing actually take place?
         <li>Cómo enfocar la preparación del oral con criterio real</li>
       </ul>
       <a href="https://calendly.com/slppass/30min" target="_blank"
-         rel="noopener" class="now-btn">
+         rel="noopener" class="now-btn"
+         onclick="gtag('event','click_calendly',{location:'now_section'});">
         RESERVAR SESIÓN — 35€
       </a>
       <p class="now-note">30 minutos · Videollamada · Reserva directa</p>
       <div style="margin-top:18px">
-        <a href="https://wa.me/34620581881?text=Hola,%20quiero%20saber%20mi%20nivel%20real%20para%20el%20SLP" target="_blank" rel="noopener" class="whatsapp-cta">
+        <a href="https://wa.me/34620581881?text=Hola,%20quiero%20saber%20mi%20nivel%20real%20para%20el%20SLP"
+           target="_blank" rel="noopener" class="whatsapp-cta"
+           onclick="gtag('event','click_whatsapp',{location:'now_section'});">
           HACER UNA CONSULTA POR WHATSAPP
         </a>
         <p class="whatsapp-note">Úsalo si antes de reservar quieres resolver una duda rápida.</p>
@@ -660,7 +674,8 @@ At what time will the briefing actually take place?
         <li>Acceso prioritario cuando la plataforma esté disponible</li>
       </ul>
       <a href="https://calendly.com/slppass/30min" target="_blank"
-         rel="noopener" class="now-btn now-btn-block">
+         rel="noopener" class="now-btn now-btn-block"
+         onclick="gtag('event','click_calendly',{location:'now_section'});">
         RESERVAR SESIÓN
       </a>
     </div>
@@ -810,6 +825,7 @@ document.addEventListener('click', function(e) {
 });
 
 document.getElementById('diagBtn').addEventListener('click', function() {
+  gtag('event','diagnostic_completed');
 
   var score = Object.values(diagnosticAnswers).reduce((a, b) => a + b, 0);
 
@@ -853,6 +869,8 @@ function submitEmail() {
     mode: "no-cors",
     body: formData
   });
+
+  gtag('event', 'email_submit', { method: 'cta_final' });
 
   // UX: ocultar form y mostrar éxito
   document.getElementById('ctaFormGroup').style.display = 'none';
