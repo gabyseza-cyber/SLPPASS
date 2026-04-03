@@ -592,18 +592,24 @@ At what time will the briefing actually take place?
 
   <div class="sample-feedback-txt" id="diagText"></div>
 
-  <div style="margin-top:15px; font-size:14px; color:#6a7a88">
+  <div style="margin-top:15px; font-size:14px; color:#6a7a88; line-height:1.6">
     Este resultado no depende solo de tu inglés.
     Depende de cómo respondes bajo criterios reales de evaluación.
   </div>
-
+  
+  <div style="margin-top:12px; font-size:14px; color:#6a7a88; line-height:1.6">
+    Este diagnóstico no mide tu nivel exacto.
+    Detecta si estás en riesgo real de no alcanzar el perfil exigido.
+  </div>
+  
   <div style="margin-top:20px; font-size:15px; font-weight:700; color:#1a2630; line-height:1.6">
-    Si tuvieras el examen mañana, lo arriesgarías todo a una impresión o preferirías saber exactamente dónde perderías nivel.
+    La mayoría de candidatos cree que está preparado.
+    Hasta que ve cómo lo evalúan realmente.
   </div>
 
   <a href="https://calendly.com/slppass/30min"
      target="_blank"
-     onclick="gtag('event','click_calendly',{location:'diagnostico'});"
+     onclick="gtag('event','click_calendly',{location:'diagnostico',source: source});"
      style="
        display:block;
        margin-top:20px;
@@ -615,12 +621,12 @@ At what time will the briefing actually take place?
        text-decoration:none;
        letter-spacing:1px;
      ">
-    RESERVAR AUDITORÍA DE PERFIL — 35€
+    VER MI NIVEL REAL CON UN EVALUADOR — 35€
   </a>
 
   <a href="https://wa.me/34620581881?text=Hola,%20he%20hecho%20el%20diagn%C3%B3stico%20de%20SLP%20PASS%20y%20quiero%20resolver%20una%20duda%20antes%20de%20reservar"
      target="_blank"
-     onclick="gtag('event','click_whatsapp',{location:'diagnostico'});"
+     onclick="gtag('event','click_whatsapp',{location:'diagnostico',source: source});"
      style="display:block; margin-top:12px; padding:14px; border:1.5px solid #4d6b3a; color:#4d6b3a; text-align:center; font-weight:700; text-decoration:none; letter-spacing:1px; background:transparent;">
     RESOLVER DUDA RÁPIDA POR WHATSAPP
   </a>
@@ -649,14 +655,14 @@ At what time will the briefing actually take place?
       </ul>
       <a href="https://calendly.com/slppass/30min" target="_blank"
          rel="noopener" class="now-btn"
-         onclick="gtag('event','click_calendly',{location:'now_section'});">
+         onclick="gtag('event','click_calendly',{location:'now_section',source: source});">
         RESERVAR SESIÓN — 35€
       </a>
       <p class="now-note">30 minutos · Videollamada · Reserva directa</p>
       <div style="margin-top:18px">
         <a href="https://wa.me/34620581881?text=Hola,%20quiero%20saber%20mi%20nivel%20real%20para%20el%20SLP"
            target="_blank" rel="noopener" class="whatsapp-cta"
-           onclick="gtag('event','click_whatsapp',{location:'now_section'});">
+           onclick="gtag('event','click_whatsapp',{location:'now_section',source: source});">
           HACER UNA CONSULTA POR WHATSAPP
         </a>
         <p class="whatsapp-note">Úsalo si antes de reservar quieres resolver una duda rápida.</p>
@@ -675,7 +681,7 @@ At what time will the briefing actually take place?
       </ul>
       <a href="https://calendly.com/slppass/30min" target="_blank"
          rel="noopener" class="now-btn now-btn-block"
-         onclick="gtag('event','click_calendly',{location:'now_section'});">
+         onclick="gtag('event','click_calendly',{location:'now_section',source: source});">
         RESERVAR SESIÓN
       </a>
     </div>
@@ -824,8 +830,10 @@ document.addEventListener('click', function(e) {
   document.getElementById('diagBtn').disabled = !ready;
 });
 
+const params = new URLSearchParams(window.location.search);
+const source = params.get('source') || 'direct';
 document.getElementById('diagBtn').addEventListener('click', function() {
-  gtag('event','diagnostic_completed');
+  gtag('event','diagnostic_completed',{ source: source });
 
   var score = Object.values(diagnosticAnswers).reduce((a, b) => a + b, 0);
 
@@ -870,7 +878,7 @@ function submitEmail() {
     body: formData
   });
 
-  gtag('event', 'email_submit', { method: 'cta_final' });
+  gtag('event', 'email_submit', { method: 'cta_final', source: source });
 
   // UX: ocultar form y mostrar éxito
   document.getElementById('ctaFormGroup').style.display = 'none';
