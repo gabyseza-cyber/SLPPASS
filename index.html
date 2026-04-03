@@ -383,25 +383,16 @@ footer{background:var(--txb);padding:40px 5vw;text-align:center}
     </div>
     <div id="registro"></div>
 <div class="signup-wrap">
-  <form name="leads" method="POST" data-netlify="true" action="/?submitted=true">
-    <input type="hidden" name="form-name" value="leads">
-  
-    <div class="form-group">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYLbohOyS6zs62Yb529tI4qt9W2ZXJexTVGGDnebVEsRx-0w/viewform" target="_blank" style="display:flex; width:100%; text-decoration:none;">
-    <button class="form-btn" type="button" style="width:100%;">
-      QUIERO PREPARAR EL SLP COMO ME VAN A EVALUAR
-    </button>
-  </a>
-</div>
-  <div class="form-note" id="heroNote">
-    Sin tarjeta de crédito · Te avisamos cuando abramos el acceso.
+  <div class="form-group">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYLbohOyS6zs62Yb529tI4qt9W2ZXJexTVGGDnebVEsRx-0w/viewform" target="_blank" style="display:flex; width:100%; text-decoration:none;">
+      <button class="form-btn" type="button" style="width:100%;">
+        QUIERO PREPARAR EL SLP COMO ME VAN A EVALUAR
+      </button>
+    </a>
   </div>
 
-  <div class="form-success" id="heroSuccess">
-    <div class="form-success-title">✓ Apuntado</div>
-    <div class="form-success-txt">
-      Te avisaremos cuando abramos el acceso anticipado.
-    </div>
+  <div class="form-note">
+    Sin tarjeta de crédito · Te avisamos cuando abramos el acceso.
   </div>
 </div>
 </section>
@@ -1010,10 +1001,5 @@ document.addEventListener('DOMContentLoaded', function() {
     if (success) success.style.display = 'block';
   }
 });
-</script>
-<form name="leads" method="POST" data-netlify="true" hidden>
-  <input type="hidden" name="form-name" value="leads">
-  <input type="email" name="email">
-</form>
 </body>
 </html>
