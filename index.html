@@ -11,8 +11,8 @@
     <!-- 👇 PEGA ESTO AQUÍ -->
     <meta property="og:title" content="SLP PASS — Prepara el SLP con quien lo evalúa">
     <meta property="og:description" content="Diagnóstico real de nivel SLP + preparación basada en criterios de evaluación reales.">
-    <meta property="og:image" content="https://slppass.netlify.app/logo.png">
-    <meta property="og:url" content="https://slppass.netlify.app/">
+    <meta property="og:image" content="https://slppass.vercel.app/logo.png">
+    <meta property="og:url" content="https://slppass.vercel.app/">
     <meta property="og:type" content="website">
     <!-- 👆 FIN -->
     
@@ -102,10 +102,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .hero-h1{font-family:'Rajdhani',sans-serif;font-size:clamp(40px,6vw,66px);
   font-weight:700;color:#fff;line-height:1.0;letter-spacing:1px;margin-bottom:24px}
 .hero-sub{font-size:18px;color:rgba(255,255,255,.72);margin-bottom:36px;
-  font-weight:300;line-height:1.75;text-align:justify}
+  font-weight:300;line-height:1.7;text-align:left}
 .hero-cred-bar{display:flex;align-items:center;flex-wrap:wrap;gap:0;margin-bottom:36px}
-.hero-cred-item{font-family:'Share Tech Mono',monospace;font-size:10px;
-  color:rgba(255,255,255,.45);letter-spacing:2px;padding:0 14px;text-transform:uppercase}
+.hero-cred-item{font-family:'Share Tech Mono',monospace;font-size:11px;
+  color:rgba(255,255,255,.52);letter-spacing:1.6px;padding:0 14px;text-transform:uppercase}
 .hero-cred-item:first-child{padding-left:0}
 .hero-cred-sep{width:1px;height:14px;background:rgba(255,255,255,.2)}
 
@@ -123,7 +123,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
   letter-spacing:2px;text-transform:uppercase;cursor:pointer;white-space:nowrap;
   transition:background .2s}
 .form-btn:hover{background:#c8a020}
-.form-note{font-size:12px;color:rgba(255,255,255,.35);margin-top:10px;letter-spacing:.3px}
+.form-note{font-size:13px;color:rgba(255,255,255,.45);margin-top:10px;letter-spacing:.2px;line-height:1.5}
 .form-success{display:none;background:rgba(77,107,58,.2);border:1px solid rgba(77,107,58,.4);
   border-left:4px solid var(--gd);padding:16px 20px;max-width:480px;margin-top:4px}
 .form-success-title{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;
@@ -137,8 +137,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .auth-cred{display:flex;flex-direction:column;gap:6px;margin-bottom:22px}
 .auth-cred-line{font-family:'Share Tech Mono',monospace;font-size:11px;
   color:var(--gd);letter-spacing:3px;text-transform:uppercase}
-.auth-txt{font-size:16px;color:rgba(255,255,255,.72);line-height:1.8;
-  font-weight:300;text-align:justify}
+.auth-txt{font-size:16px;color:rgba(255,255,255,.72);line-height:1.75;
+  font-weight:300;text-align:left}
 .auth-txt+.auth-txt{margin-top:12px}
 .auth-quote{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
   border-left:4px solid var(--gd);padding:28px 32px}
@@ -158,7 +158,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .section-h2{font-family:'Rajdhani',sans-serif;font-size:clamp(26px,4vw,40px);
   font-weight:700;color:var(--txb);letter-spacing:2px;text-transform:uppercase;
   margin-bottom:20px;line-height:1.1}
-.pain-body{font-size:17px;color:var(--txd);max-width:680px;line-height:1.85;font-weight:300}
+.pain-body{font-size:17px;color:var(--txd);max-width:680px;line-height:1.8;font-weight:300}
 .pain-body p{margin-bottom:14px;text-align:justify}
 .pain-body p:last-child{margin-bottom:0}
 
@@ -168,7 +168,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .sample-h2{font-family:'Rajdhani',sans-serif;font-size:clamp(24px,3vw,36px);
   font-weight:700;color:var(--txb);letter-spacing:2px;text-transform:uppercase;
   margin-bottom:8px}
-.sample-intro{font-size:15px;color:var(--txd);margin-bottom:28px;text-align:justify}
+.sample-intro{font-size:16px;color:var(--txd);margin-bottom:28px;text-align:left;line-height:1.7}
 .sample-card{background:var(--wh);border:1px solid var(--bdr);
   box-shadow:0 2px 12px rgba(0,0,0,.06);overflow:hidden}
 .sample-card-header{background:var(--old);padding:12px 20px;
@@ -198,10 +198,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .sample-feedback.wrong-fb{border-color:var(--rd);background:var(--rdl)}
 .sample-feedback-title{font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;
   color:var(--txb);margin-bottom:4px}
-.sample-feedback-txt{font-size:13px;color:var(--txd);line-height:1.6;text-align:justify}
+.sample-feedback-txt{font-size:14px;color:var(--txd);line-height:1.7;text-align:left}
 .sample-cta{display:none;margin-top:20px;background:var(--old);padding:20px 24px}
 .sample-cta-txt{font-size:14px;color:rgba(255,255,255,.72);margin-bottom:14px;
-  line-height:1.6;text-align:justify}
+  line-height:1.7;text-align:left}
 .sample-cta-btn{padding:10px 24px;background:var(--gd);color:#0e1820;border:none;
   font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;
   letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .2s}
@@ -216,14 +216,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
   color:var(--ol);letter-spacing:3px;margin-bottom:10px}
 .how-title{font-family:'Rajdhani',sans-serif;font-size:19px;font-weight:700;
   color:var(--txb);letter-spacing:1px;margin-bottom:8px}
-.how-txt{font-size:13px;color:var(--txd);line-height:1.7;text-align:justify}
+.how-txt{font-size:14px;color:var(--txd);line-height:1.75;text-align:left}
 
 /* ── EMPIEZA HOY ── */
 .now{background:var(--wh);padding:72px 5vw;border-top:3px solid var(--ol)}
 .now-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;
   max-width:1100px;margin:0 auto}
-.now-txt{font-size:16px;color:var(--txd);line-height:1.8;margin-bottom:20px;
-  font-weight:300;text-align:justify}
+.now-txt{font-size:16px;color:var(--txd);line-height:1.75;margin-bottom:20px;
+  font-weight:300;text-align:left}
 .now-list{list-style:none;margin-bottom:28px}
 .now-list li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;
   border-bottom:1px solid var(--bdr);font-size:14px;color:var(--tx)}
@@ -257,8 +257,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .pricing{background:var(--bg);padding:72px 5vw}
 .pricing .section-h2{text-align:center}
 .pricing .section-label{justify-content:center}
-.price-intro{font-size:15px;color:var(--txd);text-align:center;max-width:520px;
-  margin:0 auto 40px;font-weight:300;line-height:1.7}
+.price-intro{font-size:16px;color:var(--txd);text-align:center;max-width:560px;
+  margin:0 auto 40px;font-weight:300;line-height:1.75}
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:24px}
 .price-card{border:1px solid var(--bdr);padding:32px 26px;
   background:var(--wh);position:relative}
@@ -289,8 +289,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
   padding:24px 28px;max-width:500px}
 .price-speaking-title{font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;
   color:var(--txb);letter-spacing:1px;margin-bottom:8px}
-.price-speaking-txt{font-size:13px;color:var(--txd);margin-bottom:14px;
-  line-height:1.6;text-align:justify}
+.price-speaking-txt{font-size:14px;color:var(--txd);margin-bottom:14px;
+  line-height:1.7;text-align:left}
 .price-speaking-btn{display:inline-block;padding:9px 22px;background:transparent;
   border:1.5px solid var(--ol);color:var(--ol);font-family:'Rajdhani',sans-serif;
   font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
@@ -310,10 +310,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
   font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;
   line-height:1.1;margin-bottom:16px}
 .cta-h2 span{color:var(--gd)}
-.cta-sub{font-size:17px;color:rgba(255,255,255,.6);margin-bottom:40px;
-  font-weight:300;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7}
+.cta-sub{font-size:17px;color:rgba(255,255,255,.68);margin-bottom:40px;
+  font-weight:300;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.75}
 .cta-form{display:flex;max-width:480px;margin:0 auto 12px;gap:0}
-.cta-note{font-size:12px;color:rgba(255,255,255,.3);letter-spacing:.3px}
+.cta-note{font-size:13px;color:rgba(255,255,255,.4);letter-spacing:.2px;line-height:1.5}
 .cta-success{display:none;max-width:480px;margin:12px auto 0;
   background:rgba(77,107,58,.2);border:1px solid rgba(77,107,58,.4);
   border-left:4px solid var(--gd);padding:16px 20px}
@@ -335,16 +335,33 @@ footer{background:var(--txb);padding:40px 5vw;text-align:center}
   .auth-inner{grid-template-columns:1fr}
   .how-grid{grid-template-columns:1fr}
   .price-grid{grid-template-columns:1fr;max-width:380px;margin-left:auto;margin-right:auto}
+  .hero-inner{max-width:760px}
+  .sample-inner{max-width:760px}
+  .section-inner{max-width:760px}
 }
 @media(max-width:640px){
-  .hero-inner{padding:80px 5vw 60px}
+  .hero-inner{padding:72px 5vw 56px}
   .form-group,.cta-form{flex-direction:column}
   .form-input{border-right:1px solid rgba(255,255,255,.2)}
   .cta-form .form-input{border-right:1px solid rgba(255,255,255,.2)}
   nav{padding:0 4vw}
-  .hero-cred-bar{gap:8px}
+  .hero-h1{font-size:clamp(34px,9vw,48px);line-height:1.02}
+  .hero-sub{font-size:16px;line-height:1.65;text-align:left;margin-bottom:28px}
+  .hero-cred-bar{gap:10px;align-items:flex-start}
   .hero-cred-sep{display:none}
-  .hero-cred-item{padding-left:0}
+  .hero-cred-item{padding-left:0;padding-right:0;font-size:10px;letter-spacing:1.2px}
+  .section-h2{font-size:clamp(24px,7vw,32px);line-height:1.15}
+  .sample-q{font-size:16px}
+  .sample-text{font-size:11px;line-height:1.8;padding:18px 18px}
+  .sample-question{padding:20px}
+  .sample-opt,.diag-opt{font-size:14px;line-height:1.5;padding:12px 14px}
+  .how-block{padding:24px 20px}
+  .how-txt,.price-speaking-txt,.sample-feedback-txt{font-size:14px;line-height:1.65}
+  .price-card{padding:26px 20px}
+  .price-amount{font-size:42px}
+  .cta-h2{font-size:clamp(28px,8vw,40px);line-height:1.08}
+  .cta-sub{font-size:16px;line-height:1.65}
+  .form-btn{font-size:13px;letter-spacing:1.4px;white-space:normal;line-height:1.35;padding:14px 16px}
 }
 </style>
 </head>
@@ -353,7 +370,7 @@ footer{background:var(--txb);padding:40px 5vw;text-align:center}
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <img src="logo.png" style="height:34px">
+    <img src="logo.png" style="height:58px;object-fit:contain">
     <div>
       <div class="nav-name">SLP PASS</div>
       <div class="nav-sub">STANAG 6001 · NATO</div>
@@ -368,25 +385,27 @@ footer{background:var(--txb);padding:40px 5vw;text-align:center}
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-label">Preparación STANAG 6001</div>
-    <h1 class="hero-h1">Prepara el SLP<br>con quien lo evalúa.</h1>
+    <h1 class="hero-h1">
+Consigue el SLP.<br>
+No falles por no entender el examen.
+    </h1>
     <p class="hero-sub">
-      Ejercicios basados en el examen real. Escritos por un evaluador
-      acreditado STANAG 6001 en activo (ET). Perfil SLP 4343.
-      Prepárate en formato real y llega sabiendo qué te van a medir.
+La mayoría no suspende por inglés. Suspende porque no entiende cómo evalúa el examinador.
+Aquí entrenas exactamente bajo esos criterios.
     </p>
     <div class="hero-cred-bar">
-      <span class="hero-cred-item">Evaluador acreditado STANAG 6001</span>
+      <span class="hero-cred-item">+15 años evaluando SLP 2222</span>
       <div class="hero-cred-sep"></div>
-      <span class="hero-cred-item">Ejército de Tierra</span>
+      <span class="hero-cred-item">Evaluador acreditado STANAG 6001 (ET)</span>
       <div class="hero-cred-sep"></div>
-      <span class="hero-cred-item">Perfil SLP 4343</span>
+      <span class="hero-cred-item">Formación UK · Perfil SLP 4343</span>
     </div>
     <div id="registro"></div>
 <div class="signup-wrap">
   <div class="form-group">
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYLbohOyS6zs62Yb529tI4qt9W2ZXJexTVGGDnebVEsRx-0w/viewform" target="_blank" style="display:flex; width:100%; text-decoration:none;">
       <button class="form-btn" type="button" style="width:100%;">
-        QUIERO PREPARAR EL SLP COMO ME VAN A EVALUAR
+        QUIERO SABER MI NIVEL REAL
       </button>
     </a>
   </div>
@@ -406,15 +425,12 @@ footer{background:var(--txb);padding:40px 5vw;text-align:center}
         <span class="auth-cred-line">Perfil SLP 4343 · En activo</span>
       </div>
       <p class="auth-txt">
-        SLP PASS no es material académico adaptado al examen.
-        Es preparación construida por alguien que conoce los criterios
-        de evaluación desde dentro — qué se busca en cada skill,
-        qué distingue un nivel 1 de un 2, cómo funciona realmente
-        la parte oral del examen.
+        He evaluado durante más de 15 años candidatos en SLP 2222.
+        Sé exactamente qué hace que alguien suba o baje de nivel.
       </p>
       <p class="auth-txt">
-        Eso no está en ningún manual. No lo puede enseñar
-        una academia que nunca ha estado al otro lado de la mesa.
+        Eso no se enseña en academias.
+        Porque no están dentro del sistema de evaluación.
       </p>
     </div>
     <div class="auth-quote">
@@ -426,6 +442,10 @@ footer{background:var(--txb);padding:40px 5vw;text-align:center}
         <strong>Eso no está escrito en ningún sitio. Está aquí.</strong>"
       </p>
       <div class="auth-quote-sig">— EVALUADOR ACREDITADO STANAG 6001 · EJÉRCITO DE TIERRA</div>
+      <p class="auth-txt" style="margin-top:16px">
+        Aquí no entrenas inglés.
+        Entrenas cómo aprobar el SLP.
+      </p>
     </div>
   </div>
 </section>
@@ -436,13 +456,22 @@ footer{background:var(--txb);padding:40px 5vw;text-align:center}
     <div class="section-label">El problema</div>
     <h2 class="section-h2">No es tu nivel de inglés.<br>Es que nadie te ha explicado el examen.</h2>
     <div class="pain-body">
-      <p>El examen SLP es 80% inglés general. La mayoría se prepara con
-      material 80% militar. Esa desproporción es la primera razón por la que se falla.</p>
-      <p>Además, los criterios de evaluación no son públicos. Nadie explica
-      cómo evalúa el examinador cada skill, qué busca en el speaking,
-      ni qué separa un perfil 1 de un 2 en la práctica.</p>
-      <p>SLP PASS corrige los dos problemas: proporción real del examen
-      y criterios explicados desde dentro.</p>
+      <p>
+La mayoría de los candidatos estudia inglés.
+Pero el SLP no mide solo inglés.
+Mide cómo respondes bajo criterios de evaluación específicos.
+      </p>
+
+      <p>
+Por eso gente con buen nivel falla,
+y gente con nivel medio aprueba.
+No es el idioma. Es el enfoque.
+      </p>
+
+      <p>
+Si no sabes cómo decide el evaluador tu nivel,
+estás jugando a ciegas.
+      </p>
     </div>
   </div>
 </section>
@@ -667,9 +696,9 @@ By the time the convoy reached the border, the lead vehicle ______ a mechanical 
       </ul>
       <a href="https://calendly.com/slppass/30min" target="_blank"
          rel="noopener" class="now-btn">
-        PAGAR Y RESERVAR SESIÓN — 35€
+        RESERVAR SESIÓN — 35€
       </a>
-      <p class="now-note">30 minutos · Videollamada · Pago seguro · Reserva inmediata tras el pago</p>
+      <p class="now-note">30 minutos · Videollamada · Reserva directa</p>
     </div>
     <div class="now-card">
       <div class="now-card-label">Sesión de diagnóstico</div>
@@ -684,7 +713,7 @@ By the time the convoy reached the border, the lead vehicle ______ a mechanical 
       </ul>
       <a href="https://calendly.com/slppass/30min" target="_blank"
          rel="noopener" class="now-btn now-btn-block">
-        PAGAR Y RESERVAR
+        RESERVAR SESIÓN
       </a>
     </div>
   </div>
@@ -751,11 +780,11 @@ By the time the convoy reached the border, the lead vehicle ______ a mechanical 
       <div class="price-speaking-title">Disponible ahora — sin esperar al lanzamiento</div>
       <p class="price-speaking-txt">
         Si tienes el examen próximo o quieres saber en qué nivel estás,
-        paga y reserva una sesión de 30 minutos directamente con el evaluador.
+        reserva una sesión de 30 minutos directamente con el evaluador.
         Diagnóstico real, feedback inmediato, sin suscripción.
       </p>
       <a href="https://calendly.com/slppass/30min" target="_blank"
-         rel="noopener" class="price-speaking-btn">PAGAR Y RESERVAR SESIÓN — 35€ →</a>
+         rel="noopener" class="price-speaking-btn">RESERVAR SESIÓN — 35€ →</a>
     </div>
 
     <p class="price-note">Precios de lanzamiento. Pueden variar cuando abramos al público.</p>
@@ -772,15 +801,11 @@ By the time the convoy reached the border, the lead vehicle ______ a mechanical 
       Sin tarjeta de crédito. Sin compromiso ahora.
     </p>
     <div class="cta-form" id="ctaFormGroup">
-      <input type="email" class="form-input" id="emailFinal"
-        placeholder="tu.email@ejercito.es" autocomplete="email">
-      <button class="form-btn" onclick="signup('emailFinal','ctaSuccess')">
-        APUNTARME
-      </button>
-    </div>
-    <div class="cta-success" id="ctaSuccess">
-      <div class="cta-success-title">✓ Apuntado</div>
-      <div class="cta-success-txt">Te avisaremos cuando abramos el acceso anticipado.</div>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYLbohOyS6zs62Yb529tI4qt9W2ZXJexTVGGDnebVEsRx-0w/viewform" target="_blank" style="display:flex; width:100%; text-decoration:none;">
+        <button class="form-btn" type="button" style="width:100%;">
+          VER MI NIVEL REAL
+        </button>
+      </a>
     </div>
     <p class="cta-note" style="margin-top:14px">
       Sin tarjeta de crédito · Sin compromiso
@@ -842,28 +867,6 @@ function checkAnswer() {
   }, 500);
 }
 
-// ── REGISTRO ──────────────────────────────────────────────────────────────
-function signup(inputId, successId) {
-  var input = document.getElementById(inputId);
-  var email = input.value.trim();
-
-  if (!email || !email.includes('@') || !email.includes('.')) {
-    input.classList.add('error');
-    input.focus();
-    return;
-  }
-  input.classList.remove('error');
-
-  var form = input.closest('.form-group, .cta-form');
-  if (form) form.style.display = 'none';
-  var note = document.getElementById(
-    inputId === 'emailHero' ? 'heroNote' : null
-  );
-  if (note) note.style.display = 'none';
-
-  var success = document.getElementById(successId);
-  if (success) success.style.display = 'block';
-}
 
 // ── SCROLL HELPERS ────────────────────────────────────────────────────────
 function scrollToSection(id) {
@@ -899,46 +902,6 @@ if ('IntersectionObserver' in window) {
     observer.observe(el);
   });
 }
-var diagnosticAnswers = { q1: null, q2: null, q3: null };
-
-document.addEventListener('click', function(e) {
-  if (!e.target.classList.contains('diag-opt')) return;
-
-  var q = e.target.getAttribute('data-q');
-
-  document.querySelectorAll('.diag-opt[data-q="' + q + '"]').forEach(function(btn){
-    btn.classList.remove('selected');
-  });
-
-  e.target.classList.add('selected');
-  diagnosticAnswers[q] = parseInt(e.target.getAttribute('data-value'));
-
-  var ready = diagnosticAnswers.q1 !== null && diagnosticAnswers.q2 !== null && diagnosticAnswers.q3 !== null;
-  document.getElementById('diagBtn').disabled = !ready;
-});
-
-document.getElementById('diagBtn').addEventListener('click', function() {
-  var score = diagnosticAnswers.q1 + diagnosticAnswers.q2 + diagnosticAnswers.q3;
-
-  var title = document.getElementById('diagTitle');
-  var text = document.getElementById('diagText');
-
-  if (score <= 1) {
-    title.textContent = 'Nivel insuficiente para SLP 1';
-    text.textContent = 'Necesitas base general antes del examen.';
-  } else if (score <= 3) {
-    title.textContent = 'Perfil probable SLP 1';
-    text.textContent = 'Tienes base, pero te falta estructura.';
-  } else if (score <= 5) {
-    title.textContent = 'Cerca de SLP 2';
-    text.textContent = 'Estás cerca, pero fallarías por criterio.';
-  } else {
-    title.textContent = 'Perfil probable SLP 2';
-    text.textContent = 'Buen nivel, pero el examen penaliza detalles.';
-  }
-
-  document.getElementById('diagResult').style.display = 'block';
-});
 // ── DIAGNÓSTICO ─────────────────────────────────────────────
 
 var diagnosticAnswers = { q1: null, q2: null, q3: null, q4: null };
@@ -987,19 +950,6 @@ document.getElementById('diagBtn').addEventListener('click', function() {
 
   document.getElementById('diagResult').style.display = 'block';
 });
-// ── MENSAJE DE ÉXITO FORMULARIO ─────────────────────────────
-document.addEventListener('DOMContentLoaded', function() {
-  var params = new URLSearchParams(window.location.search);
-
-  if (params.get('submitted') === 'true') {
-    var success = document.getElementById('heroSuccess');
-    var note = document.getElementById('heroNote');
-    var form = document.querySelector('.signup-wrap form');
-
-    if (form) form.style.display = 'none';
-    if (note) note.style.display = 'none';
-    if (success) success.style.display = 'block';
-  }
-});
+</script>
 </body>
 </html>
