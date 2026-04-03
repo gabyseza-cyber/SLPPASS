@@ -679,20 +679,19 @@ At what time will the briefing actually take place?
       apúntate aquí. Sin tarjeta de crédito. Sin compromiso ahora.
     </p>
     <div class="cta-form" id="ctaFormGroup">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYLbohOyS6zs62Yb529tI4qt9W2ZXJexTVGGDnebVEsRx-0w/viewform" target="_blank" style="display:flex; width:100%; text-decoration:none;">
-        <button class="form-btn" type="button" style="width:100%;">
-          APUNTARME AL ACCESO ANTICIPADO
-        </button>
-      </a>
+      <input type="email" id="emailCapture" placeholder="tu.email@ejercito.es" style="flex:1;padding:14px 16px;border:none;font-size:14px;outline:none">
+      <button class="form-btn" onclick="submitEmail()">
+        QUIERO ACCESO PRIORITARIO
+      </button>
+    </div>
+
+    <div id="ctaSuccessMsg" style="display:none;max-width:480px;margin:12px auto 0;background:rgba(77,107,58,.2);border-left:4px solid #b8920a;padding:16px;color:#fff;text-align:left;font-size:14px;line-height:1.6">
+      Registro completado correctamente.<br>
+      Recibirás información prioritaria en cuanto la plataforma esté disponible.
     </div>
     <p class="cta-note" style="margin-top:14px">
       Sin tarjeta de crédito · Sin compromiso
     </p>
-    <div style="margin-top:18px">
-      <a href="https://wa.me/34620581881?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20SLP%20PASS" target="_blank" rel="noopener" class="whatsapp-cta" style="border-color:#d1b24a;color:#d1b24a;">
-        CONSULTAR POR WHATSAPP
-      </a>
-    </div>
   </div>
 </section>
 
@@ -833,6 +832,32 @@ document.getElementById('diagBtn').addEventListener('click', function() {
 
   document.getElementById('diagResult').style.display = 'block';
 });
+</script>
+<script>
+function submitEmail() {
+  var email = document.getElementById('emailCapture').value.trim();
+
+  if (!email || !email.includes('@')) {
+    alert('Introduce un email válido');
+    return;
+  }
+
+  // Enviar a Google Forms (modo oculto)
+  var formURL = "https://docs.google.com/forms/d/e/1FAIpQLSdYLbohOyS6zs62Yb529tI4qt9W2ZXJexTVGGDnebVEsRx-0w/formResponse";
+
+  var formData = new FormData();
+  formData.append("entry.427886802", email);
+
+  fetch(formURL, {
+    method: "POST",
+    mode: "no-cors",
+    body: formData
+  });
+
+  // UX: ocultar form y mostrar éxito
+  document.getElementById('ctaFormGroup').style.display = 'none';
+  document.getElementById('ctaSuccessMsg').style.display = 'block';
+}
 </script>
 </body>
 </html>
