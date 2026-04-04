@@ -15,7 +15,83 @@
     <meta property="og:url" content="https://slppass.vercel.app/">
     <meta property="og:type" content="website">
     <!-- 👆 FIN -->
-    
+
+    <link rel="canonical" href="https://slppass.vercel.app/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SLP PASS — ¿Aprobarías hoy el SLP 2.2.2.2?">
+    <meta name="twitter:description" content="Detecta en 2 minutos si estás en riesgo real de no alcanzar el perfil SLP que necesitas.">
+    <meta name="twitter:image" content="https://slppass.vercel.app/logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "Diagnóstico SLP PASS",
+          "description": "Evaluación directa de nivel STANAG 6001 con evaluador acreditado del Ejército de Tierra. 30 minutos, videollamada, 35€.",
+          "provider": {
+            "@type": "Person",
+            "name": "Evaluador Acreditado STANAG 6001",
+            "description": "Evaluador acreditado STANAG 6001, Ejército de Tierra. Perfil SLP 4343. Más de 15 años de experiencia."
+          },
+          "url": "https://slppass.vercel.app/",
+          "offers": {
+            "@type": "Offer",
+            "price": "35",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿El diagnóstico es presencial o por videollamada?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Por videollamada. Puedes hacerlo desde cualquier lugar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuándo antes del examen tiene sentido hacer el diagnóstico?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Idealmente con al menos 4-6 semanas de margen. Si tienes el examen en menos de 2 semanas, también es útil: sabrás exactamente en qué centrarte."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué pasa si no obtengo información útil en la sesión?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Si al terminar la sesión no obtienes un diagnóstico claro de tu nivel, te devolvemos el dinero. Sin preguntas."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Para qué nivel SLP sirve este diagnóstico?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Principalmente para candidatos que buscan el SLP 2.2.2.2, aunque también es útil si buscas el 3.3.3.3."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué pasa después de la sesión?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Recibes un resumen claro de tu nivel, qué te penaliza y si te conviene entrar en una preparación más larga. Sin presión para contratar nada más."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     
@@ -249,6 +325,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .now-card-features li::before{content:'✓';color:var(--gd);font-weight:700;flex-shrink:0}
 @media(max-width:900px){.now-inner{grid-template-columns:1fr}}
 
+/* ── DIAGNOSTIC SECTION ── */
+.diagnostic{background:var(--bg);padding:72px 5vw}
+
+/* ── FAQ ── */
+.faq{background:var(--lt);padding:72px 5vw}
+.faq-list{margin-top:36px;border-top:1px solid var(--bdr)}
+.faq-item{border-bottom:1px solid var(--bdr);padding:22px 0}
+.faq-q{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;
+  color:var(--txb);margin-bottom:8px;letter-spacing:.5px}
+.faq-a{font-size:15px;color:var(--txd);line-height:1.75;max-width:720px}
 
 /* ── CTA FINAL ── */
 .cta-final{background:#0e1820;padding:96px 5vw;text-align:center;
@@ -319,7 +405,7 @@ footer{background:var(--txb);padding:40px 5vw;text-align:center}
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <img src="logo.png" style="height:58px;object-fit:contain">
+    <img src="logo.png" alt="SLP PASS — Preparación STANAG 6001" style="height:58px;object-fit:contain">
     <div>
       <div class="nav-name">SLP PASS</div>
       <div class="nav-sub">STANAG 6001 · NATO</div>
@@ -511,6 +597,40 @@ RSVP: cpl.ross@campeagle.mil</div>
     </div>
   </div>
 </section>
+<!-- ── PREGUNTAS FRECUENTES ─────────────────────────────────────────────── -->
+<section class="faq" id="faq">
+  <div class="section-inner">
+    <div class="section-label">Preguntas frecuentes</div>
+    <h2 class="section-h2">Lo que suelen preguntar antes de reservar.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">¿Es presencial o por videollamada?</div>
+        <div class="faq-a">Por videollamada. Puedes conectarte desde cualquier lugar, sin desplazarte.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Cuándo antes del examen tiene sentido hacerlo?</div>
+        <div class="faq-a">Con 4–6 semanas de margen es lo ideal, para poder trabajar lo que detectemos. Si tienes el examen en menos de 2 semanas, también es útil: sabrás exactamente en qué centrarte los días que quedan.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Y si al terminar la sesión no me ha aportado nada claro?</div>
+        <div class="faq-a">Te devuelvo el dinero. Sin preguntas. La sesión está diseñada para darte un diagnóstico concreto: si no lo obtienes, no tiene sentido que pagues.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Para qué nivel SLP sirve?</div>
+        <div class="faq-a">Principalmente para el SLP 2.2.2.2, que es el más exigido. Si buscas el 3.3.3.3, también sirve: el diagnóstico te da el mismo resultado de precisión, adaptado al nivel que necesitas alcanzar.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Qué pasa después de la sesión?</div>
+        <div class="faq-a">Recibes un diagnóstico claro: en qué nivel estás, qué errores concretos te penalizarían, y si te conviene o no entrar en una preparación más larga. Sin presión para contratar nada más.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Hay que preparar algo antes de la sesión?</div>
+        <div class="faq-a">No. Llegas como estás. Precisamente de eso se trata: evaluar tu nivel real, no el que has preparado para la ocasión.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── DIAGNÓSTICO RÁPIDO ───────────────────────────────────────────── -->
 <section class="diagnostic" id="diagnostico">
   <div class="section-inner">
@@ -609,11 +729,11 @@ At what time will the briefing actually take place?
     Hasta que entiende cómo la evalúan realmente.
   </div>
 
-  <p style="margin-top:12px; font-size:13px; color:#6a7a88; text-align:center">
+  <p id="diagCtaIntro" style="margin-top:12px; font-size:13px; color:#6a7a88; text-align:center">
 Antes de meterte en una preparación larga y costosa, conviene confirmar si ese es realmente tu problema.
   </p>
   <a href="https://calendly.com/slppass/30min"
-     target="_blank"
+     target="_blank" rel="noopener noreferrer"
      onclick="gtag('event','click_calendly',{location:'diagnostico',source: source});"
      style="
        display:block;
@@ -642,7 +762,7 @@ Antes de meterte en una preparación larga y costosa, conviene confirmar si ese 
 </a>
 
   <a href="https://wa.me/34620581881?text=Hola,%20he%20hecho%20el%20diagn%C3%B3stico%20de%20SLP%20PASS%20y%20quiero%20resolver%20una%20duda%20antes%20de%20reservar"
-     target="_blank"
+     target="_blank" rel="noopener noreferrer"
      onclick="gtag('event','click_whatsapp',{location:'diagnostico',source: source});"
      style="display:block; margin-top:12px; padding:14px; border:1.5px solid #4d6b3a; color:#4d6b3a; text-align:center; font-weight:700; text-decoration:none; letter-spacing:1px; background:transparent;">
     RESOLVER DUDA RÁPIDA POR WHATSAPP
@@ -683,19 +803,19 @@ no puedes permitirte fallar por no entender cómo te evalúan.
       </p>
       <div style="margin-top:24px">
         <a href="https://calendly.com/slppass/30min" target="_blank"
-           rel="noopener" class="now-btn"
+           rel="noopener noreferrer" class="now-btn"
            onclick="gtag('event','click_calendly',{location:'now_section',source: source});">
           RESERVAR DIAGNÓSTICO — 35€
         </a>
 
         <p class="now-note">
-          30 min · Videollamada · evaluación directa
+          30 min · Videollamada · evaluación directa · <strong>garantía de devolución</strong>
         </p>
       </div>
 
       <div style="margin-top:20px">
         <a href="https://wa.me/34620581881?text=Hola,%20quiero%20saber%20si%20estoy%20en%20nivel%20para%20el%20SLP"
-           target="_blank" rel="noopener" class="whatsapp-cta"
+           target="_blank" rel="noopener noreferrer" class="whatsapp-cta"
            onclick="gtag('event','click_whatsapp',{location:'now_section',source: source});">
           CONSULTAR DUDA POR WHATSAPP
         </a>
@@ -708,6 +828,10 @@ no puedes permitirte fallar por no entender cómo te evalúan.
     <div class="now-card">
       <div class="now-card-label">Lo que ocurre en la sesión</div>
 
+      <div class="now-card-price"><span>35</span>€</div>
+      <div class="now-card-period">Sesión única · 30 min · Videollamada</div>
+      <div class="now-card-divider"></div>
+
       <ul class="now-card-features">
         <li>Simulación breve del oral real</li>
         <li>Evaluación directa según criterios SLP</li>
@@ -715,9 +839,14 @@ no puedes permitirte fallar por no entender cómo te evalúan.
         <li>Diagnóstico final claro (apto / no apto)</li>
       </ul>
 
-      <div style="margin-top:20px">
+      <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);
+        padding:12px 14px;margin-bottom:20px;font-size:13px;color:rgba(255,255,255,.72);line-height:1.6">
+        <strong style="color:var(--gd)">Garantía:</strong> Si al terminar no obtienes un diagnóstico claro de tu nivel, te devuelvo el dinero. Sin preguntas.
+      </div>
+
+      <div style="margin-top:0">
         <a href="https://calendly.com/slppass/30min" target="_blank"
-           rel="noopener" class="now-btn now-btn-block"
+           rel="noopener noreferrer" class="now-btn now-btn-block"
            onclick="gtag('event','click_calendly',{location:'now_section',source: source});">
           RESERVAR AHORA
         </a>
@@ -758,7 +887,7 @@ no puedes permitirte fallar por no entender cómo te evalúan.
 <footer>
   <div class="footer-logo">SLP PASS</div>
   <div class="footer-sub">STANAG 6001 · NATO LANGUAGE PROFICIENCY</div>
-  <p class="footer-note">© 2025 SLP PASS · slppass.vercel.app</p>
+  <p class="footer-note">© 2026 SLP PASS · slppass.vercel.app</p>
 </footer>
 
 <script>
@@ -878,18 +1007,24 @@ document.getElementById('diagBtn').addEventListener('click', function() {
   var title = document.getElementById('diagTitle');
   var text = document.getElementById('diagText');
 
+  var ctaIntro = document.getElementById('diagCtaIntro');
+
   if (score <= 2) {
     title.textContent = 'Probabilidad de aprobado: 20%';
     text.textContent = 'Si tuvieras el examen mañana, lo más probable es que no alcanzaras el nivel exigido. Tu riesgo principal está en comprensión, estructura y capacidad de respuesta bajo criterios reales de evaluación.';
+    ctaIntro.textContent = 'Con este resultado, cada semana que pasa sin saber exactamente qué trabajar es tiempo perdido. El diagnóstico te da un plan concreto en 30 minutos.';
   } else if (score <= 5) {
     title.textContent = 'Probabilidad de aprobado: 45%';
     text.textContent = 'Tienes base, pero hoy seguirías con un riesgo alto de quedarte corto. El problema no es solo tu inglés: es cómo respondes en el formato real del examen y qué errores te penalizan.';
+    ctaIntro.textContent = 'Estás a mitad de camino. El diagnóstico te dirá exactamente qué te separa del aprobado y si puedes llegar a tiempo.';
   } else if (score <= 7) {
     title.textContent = 'Probabilidad de aprobado: 65%';
     text.textContent = 'Estás cerca, pero todavía puedes perder nivel por falta de precisión, estructura o comprensión específica. Este es el punto en el que muchos candidatos creen que aprueban y fallan.';
+    ctaIntro.textContent = 'Aquí es donde más candidatos se confían y fallan. El diagnóstico te dice si estás de verdad en zona de aprobado o si hay errores que todavía te penalizan.';
   } else {
     title.textContent = 'Probabilidad de aprobado: 80%';
     text.textContent = 'Tu base es sólida, pero ni siquiera este resultado garantiza el aprobado. El SLP no se supera solo con buen inglés: se supera sabiendo exactamente qué espera el evaluador en cada fase.';
+    ctaIntro.textContent = 'Buen resultado, pero el 20% restante es el que decide. Una sesión confirma si realmente estás listo o si hay algo concreto que todavía puede hacerte fallar.';
   }
 
   document.getElementById('diagResult').style.display = 'block';
@@ -899,7 +1034,8 @@ document.getElementById('diagBtn').addEventListener('click', function() {
 function submitEmail() {
   var email = document.getElementById('emailCapture').value.trim();
 
-  if (!email || !email.includes('@')) {
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email || !emailRegex.test(email)) {
     alert('Introduce un email válido');
     return;
   }
@@ -914,6 +1050,9 @@ function submitEmail() {
     method: "POST",
     mode: "no-cors",
     body: formData
+  }).catch(function() {
+    // no-cors mode always resolves; this only catches network-level failures
+    console.warn('Email submission network error');
   });
 
   gtag('event', 'email_submit', { method: 'cta_final', source: source });
