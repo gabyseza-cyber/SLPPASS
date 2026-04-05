@@ -759,25 +759,13 @@ At what time will the briefing actually take place?
 
   <div class="sample-feedback-txt" id="diagText"></div>
 
-  <div style="margin-top:15px; font-size:14px; color:#6a7a88; line-height:1.6">
-    Este resultado no depende solo de tu inglés.
-    Depende de cómo respondes bajo criterios reales de evaluación.
-  </div>
-  
-  <div style="margin-top:12px; font-size:14px; color:#6a7a88; line-height:1.6">
-    Este diagnóstico no mide tu nivel exacto.
-    Detecta si estás en riesgo real de no alcanzar el perfil exigido.
-    No es un test genérico: se basa en cómo decide el evaluador tu nivel.
-  </div>
-  
-  <div style="margin-top:20px; font-size:15px; font-weight:700; color:#1a2630; line-height:1.6">
-    La mayoría de candidatos cree que está preparada.
-    Hasta que entiende cómo la evalúan realmente.
+  <div style="margin-top:20px; font-size:14px; color:#6a7a88; line-height:1.7; border-left:3px solid #4d6b3a; padding-left:14px;">
+    Este diagnóstico no mide tu nivel de inglés en general.<br>
+    Detecta si tu perfil encaja con lo que el evaluador puntúa en el STANAG 6001.<br>
+    Son cosas distintas, y la diferencia importa.
   </div>
 
-  <p id="diagCtaIntro" style="margin-top:12px; font-size:13px; color:#6a7a88; text-align:center">
-Antes de meterte en una preparación larga y costosa, conviene confirmar si ese es realmente tu problema.
-  </p>
+  <p id="diagCtaIntro" style="margin-top:18px; font-size:14px; color:#1a2630; font-weight:600; text-align:center; line-height:1.6"></p>
   <a href="https://calendly.com/slppass/30min"
      target="_blank" rel="noopener noreferrer"
      onclick="gtag('event','click_calendly',{location:'diagnostico',source: source});"
@@ -1052,21 +1040,21 @@ document.getElementById('diagBtn').addEventListener('click', function() {
   var ctaIntro = document.getElementById('diagCtaIntro');
 
   if (score <= 2) {
-    title.textContent = 'Probabilidad de aprobado: 20%';
-    text.textContent = 'Si tuvieras el examen mañana, lo más probable es que no alcanzaras el nivel exigido. Tu riesgo principal está en comprensión, estructura y capacidad de respuesta bajo criterios reales de evaluación.';
-    ctaIntro.textContent = 'Con este resultado, cada semana que pasa sin saber exactamente qué trabajar es tiempo perdido. El diagnóstico te da un plan concreto en 30 minutos.';
+    title.textContent = 'Resultado: nivel por debajo del umbral SLP 2';
+    text.textContent = 'Con este perfil, el examen hoy sería muy probable que acabara en SLP 1 o por debajo. No es una cuestión de inglés solamente: es de estructura, respuesta al evaluador y control del formato oral. Sin saber exactamente qué falla, cualquier preparación es un disparo al aire.';
+    ctaIntro.textContent = 'En 30 minutos sabrás qué trabajar, en qué orden y si tienes margen real antes de tu examen.';
   } else if (score <= 5) {
-    title.textContent = 'Probabilidad de aprobado: 45%';
-    text.textContent = 'Tienes base, pero hoy seguirías con un riesgo alto de quedarte corto. El problema no es solo tu inglés: es cómo respondes en el formato real del examen y qué errores te penalizan.';
-    ctaIntro.textContent = 'Estás a mitad de camino. El diagnóstico te dirá exactamente qué te separa del aprobado y si puedes llegar a tiempo.';
+    title.textContent = 'Resultado: zona de riesgo — podrías quedarte corto';
+    text.textContent = 'Tienes base, pero hoy no es suficiente para garantizar el SLP 2. Lo que suele fallar en este rango no es el vocabulario: es la capacidad de sostener el nivel bajo presión, responder al evaluador con estructura y no cometer los errores que penalizan en los descriptores reales.';
+    ctaIntro.textContent = 'Una sesión de diagnóstico te dice si estás a tiempo, qué te penaliza exactamente y cómo corregirlo antes del examen.';
   } else if (score <= 7) {
-    title.textContent = 'Probabilidad de aprobado: 65%';
-    text.textContent = 'Estás cerca, pero todavía puedes perder nivel por falta de precisión, estructura o comprensión específica. Este es el punto en el que muchos candidatos creen que aprueban y fallan.';
-    ctaIntro.textContent = 'Aquí es donde más candidatos se confían y fallan. El diagnóstico te dice si estás de verdad en zona de aprobado o si hay errores que todavía te penalizan.';
+    title.textContent = 'Resultado: cerca del nivel, pero sin confirmación real';
+    text.textContent = 'Este es el resultado más traicionero. Estás cerca, pero "cerca" en el STANAG 6001 significa que un evaluador formado puede bajarte de nivel por errores que tú no identificas como problemas. La diferencia entre un SLP 1 y un SLP 2 muchas veces no es el inglés: es saber cómo se puntúa.';
+    ctaIntro.textContent = 'Una sesión confirma si realmente estás en zona de aprobado o si hay algo concreto que todavía puede hacerte fallar.';
   } else {
-    title.textContent = 'Probabilidad de aprobado: 80%';
-    text.textContent = 'Tu base es sólida, pero ni siquiera este resultado garantiza el aprobado. El SLP no se supera solo con buen inglés: se supera sabiendo exactamente qué espera el evaluador en cada fase.';
-    ctaIntro.textContent = 'Buen resultado, pero el 20% restante es el que decide. Una sesión confirma si realmente estás listo o si hay algo concreto que todavía puede hacerte fallar.';
+    title.textContent = 'Resultado: perfil compatible con SLP 2 — pero sin garantías';
+    text.textContent = 'Tienes el mejor punto de partida, pero el SLP 2 no se aprueba con buen inglés: se aprueba sabiendo exactamente qué espera el evaluador en cada fase. Candidatos con nivel similar han salido con SLP 1 por no conocer los criterios reales. Una sesión de diagnóstico descarta ese riesgo.';
+    ctaIntro.textContent = 'Confirma que lo que sabes es suficiente. Si hay algún punto débil que no ves, mejor saberlo ahora.';
   }
 
   document.getElementById('diagResult').style.display = 'block';
