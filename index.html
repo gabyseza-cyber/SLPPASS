@@ -580,14 +580,20 @@ RSVP: cpl.ross@campeagle.mil</div>
           <div class="sample-feedback-txt" id="fbTxt"></div>
         </div>
         <div class="sample-cta" id="sampleCta">
-          <p class="sample-cta-txt" style="font-style:italic; opacity:.85; margin-bottom:10px">
-            La mayoría de candidatos no falla en esto.<br>Falla en lo que no ve venir.
-          </p>
           <p class="sample-cta-txt">
-            Esto es solo una parte del examen. Donde realmente se decide el nivel es en cómo respondes en el oral. Haz el diagnóstico completo y comprueba si estás en nivel o no.
+            Esto es una parte básica del examen. La mayoría de candidatos no falla aquí.
+          </p>
+          <p class="sample-cta-txt" style="margin-top:8px">
+            Falla en preguntas donde hay que interpretar matices y en cómo responde en el oral bajo evaluación real.
+          </p>
+          <p class="sample-cta-txt" style="margin-top:12px; font-weight:700; opacity:1">
+            Ahí es donde se decide el nivel.
+          </p>
+          <p class="sample-cta-txt" style="margin-top:16px; font-style:italic; opacity:.9">
+            Si hoy tuvieras el examen, ¿estarías en nivel o no?
           </p>
           <button class="sample-cta-btn" onclick="scrollToSection('diagnostico')">
-            HACER EL DIAGNÓSTICO COMPLETO →
+            COMPROBAR SI ESTOY EN NIVEL →
           </button>
         </div>
       </div>
@@ -959,8 +965,8 @@ function checkAnswer() {
   var txt = document.getElementById('fbTxt');
 
   if (selectedOpt === CORRECT) {
-    title.textContent = '✓ Correcto — la respuesta es C';
-    txt.innerHTML = 'El aviso menciona dos fechas: el 18 de marzo (la cena) y el 16 de marzo (límite de confirmación). La pregunta pide la fecha límite — miércoles 16 de marzo.<br><br><strong style="color:#1a2630">Este tipo de pregunta es básica en el SLP.</strong> El problema real no suele estar aquí, sino en preguntas donde hay que interpretar intención, matices o información implícita. Ahí es donde se decide el nivel.';
+    title.textContent = '✓ Correcto';
+    txt.textContent = 'La pregunta pedía identificar la fecha límite de confirmación.';
   } else {
     fb.classList.add('wrong-fb');
     title.textContent = '✗ Incorrecto — la respuesta es C';
