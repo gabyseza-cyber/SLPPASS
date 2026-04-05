@@ -37,9 +37,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .nav-sub{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--txd);letter-spacing:2px;margin-top:-3px}
 .nav-links{display:flex;align-items:center;gap:24px}
 .nav-link{font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--txd);text-decoration:none;transition:color .2s}
-.nav-link:hover{color:var(--ol)}
+.nav-link:hover,.nav-link.active{color:var(--ol)}
 .nav-cta{background:var(--ol);color:#fff;padding:9px 20px;font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
 .nav-cta:hover{background:var(--old)}
+.nav-burger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px;flex-shrink:0}
+.nav-burger span{display:block;width:22px;height:2px;background:var(--ol);transition:all .25s}
+.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mobile{display:none;position:fixed;top:var(--nav-h);left:0;right:0;z-index:99;
+  background:rgba(255,255,255,.98);border-bottom:2px solid var(--ol);
+  padding:8px 5vw 20px;flex-direction:column;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.nav-mobile.open{display:flex}
+.nav-mobile-link{font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;color:var(--txd);
+  text-decoration:none;padding:14px 0;border-bottom:1px solid var(--bdr);transition:color .2s}
+.nav-mobile-link:hover{color:var(--ol)}
+.nav-mobile-cta{margin-top:16px;padding:13px;background:var(--ol);color:#fff;
+  font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;text-decoration:none;text-align:center}
 
 .hero{min-height:100vh;padding-top:var(--nav-h);display:flex;align-items:center;background:#0e1820;position:relative;overflow:hidden}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,168,75,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(200,168,75,.05) 1px,transparent 1px);background-size:40px 40px}
@@ -102,7 +118,7 @@ footer{background:var(--txb);padding:32px 5vw;text-align:center}
 .footer-note{font-size:12px;color:rgba(255,255,255,.2)}
 
 @media(max-width:900px){.steps{grid-template-columns:1fr}.for-who-inner{grid-template-columns:1fr}}
-@media(max-width:640px){.nav-links .nav-link{display:none}.hero-price{font-size:48px}}
+@media(max-width:640px){.nav-links .nav-link,.nav-links .nav-cta{display:none}.nav-burger{display:flex}.hero-price{font-size:48px}}
 </style>
 </head>
 <body>
@@ -116,11 +132,21 @@ footer{background:var(--txb);padding:32px 5vw;text-align:center}
     </div>
   </a>
   <div class="nav-links">
+    <a href="/" class="nav-link">Inicio</a>
     <a href="/blog/" class="nav-link">Blog</a>
-    <a href="/sesion-diagnostico/" class="nav-link" style="color:var(--ol)">Sesión</a>
+    <a href="/sesion-diagnostico/" class="nav-link active">Sesión</a>
     <a href="https://calendly.com/slppass/30min" target="_blank" rel="noopener noreferrer" class="nav-cta">RESERVAR — 35€</a>
+    <button class="nav-burger" id="navBurger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="/" class="nav-mobile-link">Inicio</a>
+  <a href="/blog/" class="nav-mobile-link">Blog</a>
+  <a href="/sesion-diagnostico/" class="nav-mobile-link">Sesión</a>
+  <a href="https://calendly.com/slppass/30min" target="_blank" rel="noopener noreferrer" class="nav-mobile-cta">RESERVAR — 35€</a>
+</div>
 
 <section class="hero">
   <div class="hero-grid"></div>
@@ -227,5 +253,14 @@ footer{background:var(--txb);padding:32px 5vw;text-align:center}
   <p class="footer-note">© 2026 SLP PASS · slppass.vercel.app</p>
 </footer>
 
+<script>
+(function(){
+  var burger=document.getElementById('navBurger');
+  var menu=document.getElementById('navMobile');
+  if(!burger)return;
+  burger.addEventListener('click',function(){burger.classList.toggle('open');menu.classList.toggle('open');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('open');menu.classList.remove('open');});});
+})();
+</script>
 </body>
 </html>
