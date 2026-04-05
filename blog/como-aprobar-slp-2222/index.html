@@ -1,233 +1,259 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cómo aprobar el SLP 2.2.2.2: lo que el evaluador observa — SLP PASS</title>
-  <meta name="description" content="Guía escrita por un evaluador acreditado STANAG 6001. Qué es el BORE, cómo sube o baja el nivel en el oral y qué diferencia en la práctica un SLP 1 de un SLP 2.">
-  <link rel="canonical" href="https://slppass.vercel.app/blog/como-aprobar-slp-2222/">
-  <meta property="og:title" content="Cómo aprobar el SLP 2.2.2.2: lo que el evaluador observa">
-  <meta property="og:description" content="Guía escrita por un evaluador acreditado STANAG 6001. Qué es el BORE, cómo sube o baja el nivel en el oral y qué diferencia en la práctica un SLP 1 de un SLP 2.">
-  <meta property="og:image" content="https://slppass.vercel.app/logo.png">
-  <meta property="og:url" content="https://slppass.vercel.app/blog/como-aprobar-slp-2222/">
-  <meta property="og:type" content="article">
-  <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Cómo aprobar el SLP 2.2.2.2: lo que el evaluador observa y nadie te explica",
-    "description": "Guía escrita por un evaluador acreditado STANAG 6001. Qué es el BORE, cómo sube o baja el nivel en el oral y qué diferencia en la práctica un SLP 1 de un SLP 2.",
-    "author": {"@type": "Person", "name": "Evaluador Acreditado STANAG 6001"},
-    "publisher": {"@type": "Organization", "name": "SLP PASS", "url": "https://slppass.vercel.app"},
-    "url": "https://slppass.vercel.app/blog/como-aprobar-slp-2222/",
-    "datePublished": "2026-04-05"
-  }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPJ367DRKD"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VPJ367DRKD');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diferencia entre SLP 1 y SLP 2: qué evalúa el examinador — SLP PASS</title>
+<meta name="description" content="Qué separa un SLP 1 de un SLP 2 en el examen STANAG 6001, por áreas. Explicado por un evaluador acreditado en activo del Ejército de Tierra.">
+<link rel="canonical" href="https://slppass.vercel.app/blog/como-aprobar-slp-2222/">
+<meta property="og:title" content="Diferencia entre SLP 1 y SLP 2: qué evalúa el examinador — SLP PASS">
+<meta property="og:description" content="Qué separa un SLP 1 de un SLP 2 en el examen STANAG 6001, por áreas. Explicado por un evaluador acreditado en activo del Ejército de Tierra.">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-04-05">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#f2ede2;--wh:#ffffff;--lt:#f8f5ef;--bdr:#d8d2c6;--tx:#1a2630;--txd:#6a7a88;--txb:#0e1820;--ol:#4d6b3a;--old:#3a5229;--oll:#edf2e8;--gd:#b8920a;--gdl:#fdf5de;--nav-h:84px}
+:root{
+  --bg:#f2ede2;--wh:#ffffff;--lt:#f8f5ef;
+  --bdr:#d8d2c6;--tx:#1a2630;--txd:#6a7a88;--txb:#0e1820;
+  --ol:#4d6b3a;--old:#3a5229;--oll:#edf2e8;
+  --gd:#b8920a;
+  --nav-h:64px;
+}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--tx);font-family:'Lato',sans-serif;line-height:1.6;font-size:16px}
+body{background:var(--bg);color:var(--tx);font-family:'Lato',sans-serif;line-height:1.6}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.97);
   border-bottom:2px solid var(--ol);height:var(--nav-h);
   display:flex;align-items:center;justify-content:space-between;padding:0 5vw;
   box-shadow:0 2px 12px rgba(0,0,0,.07)}
-.nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
-.nav-name{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:var(--old);letter-spacing:3px}
-.nav-sub{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--txd);letter-spacing:2px;margin-top:-3px}
-.nav-links{display:flex;align-items:center;gap:24px}
-.nav-link{font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--txd);text-decoration:none;transition:color .2s}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-emblem{width:34px;height:34px;background:var(--ol);display:flex;align-items:center;
+  justify-content:center;color:#fff;font-size:15px;flex-shrink:0}
+.nav-name{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;
+  color:var(--old);letter-spacing:3px}
+.nav-sub{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--txd);
+  letter-spacing:2px;margin-top:-3px}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-link{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:2px;
+  color:var(--txd);text-decoration:none;text-transform:uppercase;transition:color .2s}
 .nav-link:hover{color:var(--ol)}
-.nav-cta{background:var(--ol);color:#fff;padding:9px 20px;font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+.nav-cta{background:var(--ol);color:#fff;padding:9px 20px;
+  font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
 .nav-cta:hover{background:var(--old)}
-
-/* ── ARTÍCULO ── */
-.article-header{background:#0e1820;padding:80px 5vw 60px;margin-top:var(--nav-h)}
-.article-header-inner{max-width:760px;margin:0 auto}
-.breadcrumb{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:2px;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:20px}
-.breadcrumb a{color:rgba(255,255,255,.4);text-decoration:none}
-.breadcrumb a:hover{color:var(--gd)}
-.article-tag{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--gd);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.article-tag::before{content:'';width:20px;height:1px;background:var(--gd)}
-.article-h1{font-family:'Rajdhani',sans-serif;font-size:clamp(28px,4.5vw,48px);font-weight:700;color:#fff;line-height:1.08;letter-spacing:1px;margin-bottom:20px}
-.article-meta{font-family:'Share Tech Mono',monospace;font-size:11px;color:rgba(255,255,255,.4);letter-spacing:1.5px;text-transform:uppercase;line-height:1.8}
-
-.article-body{max-width:720px;margin:0 auto;padding:56px 5vw 0}
-.article-lead{font-size:19px;color:var(--txd);line-height:1.8;font-weight:300;margin-bottom:40px;border-left:4px solid var(--ol);padding-left:20px}
-.article-body h2{font-family:'Rajdhani',sans-serif;font-size:clamp(20px,3vw,28px);font-weight:700;color:var(--txb);letter-spacing:1.5px;text-transform:uppercase;margin:48px 0 16px;line-height:1.15}
-.article-body h2::before{content:'';display:block;width:32px;height:3px;background:var(--ol);margin-bottom:12px}
-.article-body p{font-size:17px;color:var(--tx);line-height:1.85;margin-bottom:20px;text-align:justify}
+.article-wrap{max-width:720px;margin:0 auto;padding:calc(var(--nav-h) + 48px) 5vw 80px}
+.breadcrumb{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:2px;
+  color:var(--txd);text-transform:uppercase;margin-bottom:28px;
+  display:flex;align-items:center;gap:8px}
+.breadcrumb a{color:var(--txd);text-decoration:none}
+.breadcrumb a:hover{color:var(--ol)}
+.breadcrumb-sep{color:var(--bdr)}
+.article-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.article-tag{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:2px;
+  color:var(--ol);text-transform:uppercase;padding:3px 10px;
+  border:1px solid var(--ol);background:var(--oll)}
+.article-h1{font-family:'Rajdhani',sans-serif;font-size:clamp(26px,5vw,40px);
+  font-weight:700;color:var(--txb);letter-spacing:1px;line-height:1.1;
+  margin-bottom:20px;text-transform:uppercase}
+.article-byline{font-family:'Share Tech Mono',monospace;font-size:10px;
+  letter-spacing:2px;color:var(--txd);margin-bottom:36px;
+  padding-bottom:24px;border-bottom:2px solid var(--ol);
+  display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.byline-sep{color:var(--bdr)}
+.article-body{font-size:17px;color:var(--tx);line-height:1.85;font-weight:300}
+.article-body p{margin-bottom:20px;text-align:justify}
+.article-body h2{font-family:'Rajdhani',sans-serif;font-size:24px;font-weight:700;
+  color:var(--txb);letter-spacing:1px;text-transform:uppercase;
+  margin:44px 0 16px;padding-top:16px;border-top:1px solid var(--bdr)}
 .article-body strong{color:var(--txb);font-weight:700}
-.article-body ul{margin:0 0 20px 0;padding:0;list-style:none}
-.article-body ul li{font-size:16px;color:var(--tx);line-height:1.8;padding:6px 0 6px 24px;position:relative;border-bottom:1px solid var(--bdr)}
-.article-body ul li:last-child{border-bottom:none}
-.article-body ul li::before{content:'→';position:absolute;left:0;color:var(--ol);font-weight:700;font-family:'Rajdhani',sans-serif}
-
-.callout{background:var(--gdl);border-left:4px solid var(--gd);padding:20px 24px;margin:32px 0;border-radius:0}
-.callout-label{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--gd);text-transform:uppercase;margin-bottom:8px}
-.callout p{font-size:15px;color:var(--txb);line-height:1.75;margin:0;text-align:left}
-
-.callout-warning{background:#fdeaea;border-left-color:#b83232}
-.callout-warning .callout-label{color:#b83232}
-.callout-warning p{color:#7a2020}
-
-.example-box{background:var(--wh);border:1px solid var(--bdr);padding:24px;margin:28px 0}
-.example-box-label{font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:3px;color:var(--txd);text-transform:uppercase;margin-bottom:12px}
-.example-bad{border-left:3px solid #b83232;padding:10px 14px;background:#fdeaea;margin-bottom:10px;font-size:15px;color:#7a2020;line-height:1.65;font-style:italic}
-.example-good{border-left:3px solid var(--ol);padding:10px 14px;background:var(--oll);font-size:15px;color:var(--old);line-height:1.65;font-style:italic}
-
-.article-cta{background:var(--old);padding:48px 5vw;margin-top:56px}
-.article-cta-inner{max-width:720px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
-.article-cta h3{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:#fff;letter-spacing:1px;margin-bottom:8px}
-.article-cta p{font-size:14px;color:rgba(255,255,255,.7);line-height:1.7}
-.cta-btn{display:inline-block;background:var(--gd);color:#0e1820;padding:13px 24px;font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background .2s}
+.article-body em{font-style:italic;color:var(--txd)}
+.article-body ul{list-style:none;margin:0 0 20px 0;padding:0}
+.article-body ul li{display:flex;align-items:flex-start;gap:10px;padding:9px 0;
+  border-bottom:1px solid var(--bdr);font-size:16px}
+.article-body ul li:first-child{border-top:1px solid var(--bdr)}
+.article-body ul li::before{content:'→';color:var(--ol);font-weight:700;
+  flex-shrink:0;font-family:'Rajdhani',sans-serif;margin-top:1px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--bdr);border:1px solid var(--bdr);margin:28px 0}
+.compare-col{background:var(--wh);padding:22px 20px}
+.compare-col.slp2{background:var(--oll)}
+.compare-label{font-family:'Share Tech Mono',monospace;font-size:10px;
+  letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;font-weight:700}
+.compare-col .compare-label{color:var(--txd)}
+.compare-col.slp2 .compare-label{color:var(--ol)}
+.compare-col p{font-size:14px;line-height:1.7;font-style:italic;
+  border-left:3px solid var(--bdr);padding-left:12px;margin:0;color:var(--tx)}
+.compare-col.slp2 p{border-color:var(--ol)}
+.highlight{background:var(--lt);border:1px solid var(--bdr);
+  border-left:4px solid var(--ol);padding:20px 24px;margin:28px 0}
+.highlight p{margin:0;font-size:15px;color:var(--txd);line-height:1.7;text-align:justify}
+.highlight strong{color:var(--txb)}
+.cta-box{background:var(--old);padding:36px 32px;margin:48px 0 0;text-align:center}
+.cta-pretitle{font-family:'Share Tech Mono',monospace;font-size:10px;
+  letter-spacing:3px;color:var(--gd);text-transform:uppercase;margin-bottom:12px}
+.cta-box h3{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;
+  color:#fff;letter-spacing:1px;margin-bottom:12px;text-transform:uppercase}
+.cta-box p{font-size:14px;color:rgba(255,255,255,.65);margin-bottom:24px;
+  line-height:1.6;max-width:440px;margin-left:auto;margin-right:auto}
+.cta-btn{display:inline-block;padding:13px 32px;background:var(--gd);
+  color:#0e1820;font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
 .cta-btn:hover{background:#c8a020}
-
-.article-footer{max-width:720px;margin:0 auto;padding:40px 5vw 60px;border-top:1px solid var(--bdr)}
-.back-link{font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ol);text-decoration:none}
-.back-link:hover{text-decoration:underline}
-
-footer{background:var(--txb);padding:32px 5vw;text-align:center}
-.footer-logo{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:var(--gd);letter-spacing:3px;margin-bottom:6px}
-.footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:12px;flex-wrap:wrap}
-.footer-link{font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(255,255,255,.4);letter-spacing:2px;text-decoration:none;text-transform:uppercase}
+.cta-note{font-size:12px;color:rgba(255,255,255,.4);margin-top:12px;
+  font-family:'Share Tech Mono',monospace;letter-spacing:1px}
+.back-link{display:inline-flex;align-items:center;gap:8px;margin-top:48px;
+  font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:2px;
+  color:var(--txd);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.back-link:hover{color:var(--ol)}
+footer{background:var(--txb);padding:40px 5vw;text-align:center}
+.footer-logo{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;
+  color:var(--gd);letter-spacing:3px;margin-bottom:8px}
+.footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:16px}
+.footer-link{font-family:'Share Tech Mono',monospace;font-size:10px;
+  letter-spacing:2px;color:rgba(255,255,255,.4);text-decoration:none;text-transform:uppercase}
 .footer-link:hover{color:rgba(255,255,255,.7)}
-.footer-note{font-size:12px;color:rgba(255,255,255,.2)}
-
+.footer-note{font-size:12px;color:rgba(255,255,255,.25)}
 @media(max-width:640px){
+  nav{padding:0 4vw}
   .nav-links .nav-link{display:none}
-  .article-cta-inner{grid-template-columns:1fr}
-  .cta-btn{display:block;text-align:center}
+  .compare{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="/" class="nav-logo">
-    <img src="/logo.png" alt="SLP PASS" style="height:52px;object-fit:contain">
+  <a href="https://slppass.vercel.app/" class="nav-logo">
+    <div class="nav-emblem">⚑</div>
     <div>
       <div class="nav-name">SLP PASS</div>
       <div class="nav-sub">STANAG 6001 · NATO</div>
     </div>
   </a>
   <div class="nav-links">
-    <a href="/blog/" class="nav-link" style="color:var(--ol)">Blog</a>
-    <a href="/sesion-diagnostico/" class="nav-link">Sesión</a>
-    <a href="https://calendly.com/slppass/30min" target="_blank" rel="noopener noreferrer" class="nav-cta">RESERVAR — 35€</a>
+    <a href="https://slppass.vercel.app/blog/" class="nav-link">Blog</a>
+    <a href="https://slppass.vercel.app/sesion-diagnostico/" class="nav-link">Sesión</a>
+    <a href="https://calendly.com/slppass/30min" target="_blank" rel="noopener" class="nav-cta">RESERVAR — 35€</a>
   </div>
 </nav>
 
-<div class="article-header">
-  <div class="article-header-inner">
-    <div class="breadcrumb"><a href="/">Inicio</a> · <a href="/blog/">Blog</a> · Oral SLP 2</div>
-    <div class="article-tag">Oral · Nivel SLP 2 · STANAG 6001</div>
-    <h1 class="article-h1">Cómo aprobar el SLP 2.2.2.2:<br>lo que el evaluador observa y nadie te explica</h1>
-    <div class="article-meta">Evaluador acreditado STANAG 6001 · Ejército de Tierra · Perfil SLP 4343 · Lectura: 6 min</div>
-  </div>
-</div>
+<main class="article-wrap">
 
-<div class="article-body">
-
-  <p class="article-lead">
-    La mayoría de candidatos estudia inglés para el SLP. El problema es que el SLP no mide inglés genérico. Mide cómo respondes bajo un protocolo de evaluación específico. Y ese protocolo tiene reglas que no están escritas en ningún manual público.
-  </p>
-
-  <h2>Qué es el BORE y por qué lo cambia todo</h2>
-
-  <p>El BORE —<strong>Band Of Reasonable Expectation</strong>— es el punto de partida del evaluador en el oral. Antes de que empieces a hablar, el evaluador ya tiene una hipótesis sobre tu nivel. Esa hipótesis viene de tu historial, de tu perfil, de lo que ha observado en la fase escrita.</p>
-
-  <p>El oral no empieza desde cero. Empieza desde ese punto de partida. Y lo que hace el evaluador durante la conversación es confirmar o refutar esa hipótesis inicial.</p>
-
-  <div class="callout">
-    <div class="callout-label">Lo que esto significa en la práctica</div>
-    <p>Si el evaluador empieza pensando que estás en SLP 2, te va a dar tareas de SLP 2. Si las resuelves bien, confirma el nivel. Si las resuelves mal, baja a SLP 1 para comprobar si hay nivel sostenido ahí. Si las resuelves muy bien, sube a SLP 3 para ver hasta dónde llegas.</p>
+  <div class="breadcrumb">
+    <a href="https://slppass.vercel.app/">Inicio</a>
+    <span class="breadcrumb-sep">·</span>
+    <a href="https://slppass.vercel.app/blog/">Blog</a>
+    <span class="breadcrumb-sep">·</span>
+    <span>SLP 1 vs SLP 2</span>
   </div>
 
-  <p>El objetivo del candidato no es impresionar. Es <strong>mantener el nivel con consistencia</strong>. Un buen arranque seguido de una caída penaliza más que un nivel sostenido modesto.</p>
-
-  <h2>Cómo diferencia el evaluador un SLP 1 de un SLP 2</h2>
-
-  <p>La diferencia no está en el vocabulario ni en la gramática. Está en tres cosas concretas:</p>
-
-  <ul>
-    <li><strong>Desarrollo de la respuesta:</strong> SLP 1 responde. SLP 2 desarrolla y conecta ideas.</li>
-    <li><strong>Gestión de la incertidumbre:</strong> SLP 1 se bloquea cuando no sabe una palabra. SLP 2 reformula y continúa.</li>
-    <li><strong>Iniciativa en la conversación:</strong> SLP 1 reacciona. SLP 2 anticipa y estructura por sí mismo.</li>
-  </ul>
-
-  <p>Esto significa que puedes tener un nivel de inglés B2 y quedarte en SLP 1 si no sabes desarrollar una respuesta bajo presión. Y puedes tener un B1 sólido y alcanzar el SLP 2 si dominas la estructura de la respuesta oral.</p>
-
-  <h2>El error más frecuente: respuestas cortas</h2>
-
-  <p>El evaluador pregunta: <em>"Tell me about your last training exercise."</em></p>
-
-  <div class="example-box">
-    <div class="example-box-label">Respuesta SLP 1 típica</div>
-    <div class="example-bad">"It was in October. We trained for three days. It was difficult but good."</div>
-    <div class="example-good">"The last major exercise I took part in was in October, a three-day field deployment focused on logistics coordination. What made it particularly challenging was the communication element — we had to coordinate between units using limited radio contact, which forced us to be very precise with our language. Overall I'd say it pushed us quite hard but the outcome was positive."</div>
+  <div class="article-tags">
+    <span class="article-tag">Speaking · Oral</span>
+    <span class="article-tag">SLP 1–2</span>
+    <span class="article-tag">STANAG 6001</span>
   </div>
 
-  <p>La segunda respuesta no usa vocabulario más difícil. Usa <strong>estructura, conectores y desarrollo</strong>. Eso es exactamente lo que diferencia un SLP 2 de un SLP 1 en el oral.</p>
+  <h1 class="article-h1">Diferencia entre SLP 1 y SLP 2 en el STANAG 6001: lo que decide el evaluador</h1>
 
-  <h2>Los errores que hacen bajar de nivel en menos de un minuto</h2>
-
-  <ul>
-    <li>Pausas largas sin recurso verbal (en lugar de "let me think about that for a moment…")</li>
-    <li>Respuestas de una frase sin desarrollo posterior</li>
-    <li>Repetición de las mismas estructuras gramaticales en todas las respuestas</li>
-    <li>No retomar el hilo tras una interrupción del evaluador</li>
-    <li>Pedir que repitan la pregunta más de una vez seguida</li>
-  </ul>
-
-  <div class="callout callout-warning">
-    <div class="callout-label">Lo que penaliza de forma inmediata</div>
-    <p>Bloquearse en una palabra desconocida y no continuar. En SLP 2 se espera que el candidato reformule o rodee la palabra que no conoce. Quedarse en silencio o decir "I don't know this word" confirma nivel SLP 1.</p>
+  <div class="article-byline">
+    <span>Evaluador acreditado STANAG 6001</span>
+    <span class="byline-sep">·</span>
+    <span>Ejército de Tierra · Perfil SLP 4343</span>
+    <span class="byline-sep">·</span>
+    <span>Lectura: 5 min</span>
   </div>
 
-  <h2>Cómo prepara el evaluador la sesión oral</h2>
+  <div class="article-body">
 
-  <p>El evaluador no improvisa. Tiene un banco de tareas ordenado por nivel. Para SLP 1 son tareas simples y concretas: describir, narrar en pasado, dar instrucciones básicas. Para SLP 2 son tareas que requieren opinión, comparación y gestión de información incompleta.</p>
+    <p>Muchos candidatos al examen SLP saben que necesitan el perfil 2 pero no saben exactamente en qué se diferencia de un SLP 1. El STANAG 6001 describe ambos niveles con precisión técnica, pero los descriptores no te dicen lo que el evaluador observa en la práctica. Este artículo sí lo hace, por áreas.</p>
 
-  <p>Cuando el evaluador cambia de tipo de tarea, no siempre lo anuncia. El candidato que entiende eso sabe que una pregunta más abstracta o abierta es una señal de que el evaluador está probando si puede subir de nivel. El candidato que no lo entiende responde igual que siempre y no aprovecha la ventana.</p>
+    <h2>Qué significa cada nivel</h2>
 
-  <h2>Qué hacer con esta información</h2>
+    <p>El STANAG 6001 define el nivel 1 como <strong>supervivencia</strong> y el nivel 2 como <strong>funcional</strong>. En la práctica, esa diferencia no está en el tamaño del vocabulario ni en la corrección gramatical. Está en si el candidato puede sostener comunicación real sin apoyo constante del interlocutor.</p>
 
-  <p>Saber cómo funciona el protocolo no sustituye a la práctica. Pero cambia radicalmente cómo practicas. En lugar de hacer ejercicios de gramática, trabajas respuestas estructuradas bajo tiempo. En lugar de estudiar vocabulario suelto, entrenas cómo rodear una palabra que no conoces sin perder el hilo.</p>
-
-  <p>La diferencia entre un candidato que aprueba y uno que no suele ser de semanas de trabajo enfocado, no de años de estudio.</p>
-
-</div>
-
-<div class="article-cta">
-  <div class="article-cta-inner">
-    <div>
-      <h3>¿Quieres saber en qué nivel estás realmente?</h3>
-      <p>En 30 minutos te digo exactamente dónde estás, qué te penaliza y si necesitas preparación adicional antes del examen. Con evaluación directa, no con un test automático.</p>
-      <p style="margin-top:8px;font-size:13px;color:rgba(255,255,255,.5)">Garantía de devolución si no obtienes un diagnóstico claro.</p>
+    <div class="highlight">
+      <p>El nivel 1 comunica. El nivel 2 comunica con estructura, sostiene la tarea y no necesita ayuda para terminar. En el oral, el evaluador lo detecta en los primeros minutos.</p>
     </div>
-    <a href="https://calendly.com/slppass/30min" target="_blank" rel="noopener noreferrer" class="cta-btn"
-       onclick="gtag('event','click_calendly',{location:'blog_article'});">
-      RESERVAR — 35€
-    </a>
-  </div>
-</div>
 
-<div class="article-footer">
-  <a href="/blog/" class="back-link">← VOLVER AL BLOG</a>
-</div>
+    <h2>Speaking — donde la diferencia es más visible</h2>
+
+    <p>El oral es la parte del examen donde el contraste entre niveles se ve de forma inmediata. No hace falta esperar al resultado.</p>
+
+    <p>El candidato de SLP 1 responde. Da información básica sobre sí mismo, su unidad, su familia o su rutina. Sus frases son cortas. Usa casi siempre el presente. Si el evaluador deja de preguntar, la conversación se detiene.</p>
+
+    <p>El candidato de SLP 2 hace algo distinto: construye discurso. Toma la tarea, la desarrolla y llega al final sin que el evaluador tenga que intervenir.</p>
+
+    <p>Las diferencias concretas que el evaluador detecta:</p>
+
+    <ul>
+      <li><strong>Afronta la tarea sin eludirla.</strong> Si se pide narrar un día importante de su vida, el candidato de SLP 2 lo hace. No deriva hacia un tema más cómodo.</li>
+      <li><strong>Narra en pasado de forma sostenida.</strong> No perfectamente, pero de manera comprensible durante dos o tres minutos. El SLP 1 usa casi siempre el presente o mezcla tiempos sin control.</li>
+      <li><strong>Estructura la respuesta.</strong> Hay un principio, un desarrollo y un cierre. El evaluador no tiene que reconstruir el mensaje.</li>
+      <li><strong>Gestiona los bloqueos.</strong> Cuando no sabe una palabra, la rodea y continúa. El SLP 1 se para.</li>
+      <li><strong>Controla las estructuras básicas.</strong> Los errores aparecen, pero no interrumpen el hilo.</li>
+    </ul>
+
+    <p>Un ejemplo real. El evaluador pregunta: <em>"Tell me about your last training exercise."</em></p>
+
+    <div class="compare">
+      <div class="compare-col">
+        <div class="compare-label">SLP 1 — respuesta típica</div>
+        <p>"It was in October. We trained three days. It was hard."</p>
+      </div>
+      <div class="compare-col slp2">
+        <div class="compare-label">SLP 2 — respuesta típica</div>
+        <p>"The last exercise I took part in was in October — three days in the field focused on logistics coordination. What made it difficult was the communication element: we had to work between units with limited radio contact, so precision mattered a lot. Overall it was demanding but useful."</p>
+      </div>
+    </div>
+
+    <p>La segunda respuesta no usa vocabulario más difícil. Usa estructura, conectores y desarrollo. Eso es lo que separa un nivel del otro.</p>
+
+    <h2>Listening — qué comprende cada nivel</h2>
+
+    <p>El candidato de SLP 1 entiende frases cortas y predecibles sobre situaciones concretas: horarios, indicaciones, peticiones básicas. Necesita que el interlocutor hable despacio y repita. Capta lo esencial si el contexto es claro y no hay ambigüedad.</p>
+
+    <p>El candidato de SLP 2 sigue conversaciones reales sin necesidad de repetición. Entiende el hilo de un diálogo entre dos personas, capta la idea principal y los detalles relevantes, y puede seguir una narración de eventos pasados o futuros. Ya no depende de que el mensaje sea predecible.</p>
+
+    <h2>Reading — cómo procesa el texto cada nivel</h2>
+
+    <p>El SLP 1 lee textos directos: avisos, horarios, menús, instrucciones simples. Localiza información explícita si está claramente presentada. Falla cuando hay que relacionar información de distintas partes del texto o cuando la pregunta no reproduce exactamente las palabras del enunciado.</p>
+
+    <p>El SLP 2 lee textos auténticos sobre temas cotidianos y profesionales generales. Comprende la idea principal, localiza detalles específicos entre varios datos y puede inferir significado a partir del contexto. Distingue entre lo que dice el texto y lo que parece que dice.</p>
+
+    <h2>Writing — qué produce cada nivel por escrito</h2>
+
+    <p>El SLP 1 escribe para cubrir necesidades inmediatas: una nota, una lista, un mensaje breve. Las frases son simples, los errores frecuentes, pero el mensaje llega.</p>
+
+    <p>El SLP 2 escribe correspondencia básica: una carta, un email formal, un memorando, un informe breve. Organiza las ideas en párrafos con una lógica mínima. Describe, narra en distintos tiempos y da instrucciones por escrito. Los errores aparecen pero no bloquean la comunicación.</p>
+
+    <h2>La diferencia real, resumida</h2>
+
+    <p>El nivel 1 comunica. El nivel 2 comunica con estructura, sostiene la tarea y no necesita ayuda para terminar.</p>
+
+    <p>En el oral, el evaluador lo detecta en los primeros minutos: el candidato de SLP 2 toma la tarea y la lleva hasta el final. El de SLP 1 espera la siguiente pregunta.</p>
+
+    <p>Si no sabes en qué nivel estás realmente, la única forma de saberlo con certeza es que un evaluador acreditado te lo diga directamente — no un test automático.</p>
+
+    <div class="cta-box">
+      <div class="cta-pretitle">Disponible ahora</div>
+      <h3>¿En qué nivel estás realmente?</h3>
+      <p>En 30 minutos te digo exactamente dónde estás, qué te penaliza y qué necesitas para subir al perfil que buscas. Con evaluación directa y criterio real de examen.</p>
+      <a href="https://calendly.com/slppass/30min" target="_blank" rel="noopener" class="cta-btn">RESERVAR SESIÓN — 35€</a>
+      <div class="cta-note">30 min · Videollamada · Garantía de devolución si no obtienes un diagnóstico claro</div>
+    </div>
+
+    <a href="https://slppass.vercel.app/blog/" class="back-link">← Volver al blog</a>
+
+  </div>
+</main>
 
 <footer>
   <div class="footer-logo">SLP PASS</div>
   <div class="footer-links">
-    <a href="/" class="footer-link">Inicio</a>
-    <a href="/blog/" class="footer-link">Blog</a>
-    <a href="/sesion-diagnostico/" class="footer-link">Sesión diagnóstico</a>
+    <a href="https://slppass.vercel.app/" class="footer-link">Inicio</a>
+    <a href="https://slppass.vercel.app/blog/" class="footer-link">Blog</a>
+    <a href="https://slppass.vercel.app/sesion-diagnostico/" class="footer-link">Sesión diagnóstico</a>
   </div>
   <p class="footer-note">© 2026 SLP PASS · slppass.vercel.app</p>
 </footer>
