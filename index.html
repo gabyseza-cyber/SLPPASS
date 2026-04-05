@@ -580,8 +580,11 @@ RSVP: cpl.ross@campeagle.mil</div>
           <div class="sample-feedback-txt" id="fbTxt"></div>
         </div>
         <div class="sample-cta" id="sampleCta">
+          <p class="sample-cta-txt" style="font-style:italic; opacity:.85; margin-bottom:10px">
+            La mayoría de candidatos no falla en esto.<br>Falla en lo que no ve venir.
+          </p>
           <p class="sample-cta-txt">
-            Esto es solo una muestra. El diagnóstico te ayudará a detectar si hoy estás lejos del aprobado y si te conviene revisar tu nivel con un evaluador.
+            Esto es solo una parte del examen. Donde realmente se decide el nivel es en cómo respondes en el oral. Haz el diagnóstico completo y comprueba si estás en nivel o no.
           </p>
           <button class="sample-cta-btn" onclick="scrollToSection('diagnostico')">
             HACER EL DIAGNÓSTICO COMPLETO →
@@ -953,12 +956,12 @@ function checkAnswer() {
   var txt = document.getElementById('fbTxt');
 
   if (selectedOpt === CORRECT) {
-    title.textContent = '✓ Correcto';
-    txt.textContent = 'El aviso menciona dos fechas: el 18 de marzo (la cena) y el 16 de marzo (límite para confirmar). La pregunta pide la fecha límite de confirmación — miércoles 16 de marzo.';
+    title.textContent = '✓ Correcto — la respuesta es C';
+    txt.innerHTML = 'El aviso menciona dos fechas: el 18 de marzo (la cena) y el 16 de marzo (límite de confirmación). La pregunta pide la fecha límite — miércoles 16 de marzo.<br><br><strong style="color:#1a2630">Este tipo de pregunta es básica en el SLP.</strong> El problema real no suele estar aquí, sino en preguntas donde hay que interpretar intención, matices o información implícita. Ahí es donde se decide el nivel.';
   } else {
     fb.classList.add('wrong-fb');
     title.textContent = '✗ Incorrecto — la respuesta es C';
-    txt.textContent = 'El aviso menciona varias fechas. La cena es el 18 de marzo, pero el límite para confirmar asistencia es el 16 de marzo. En el examen SLP este tipo de pregunta requiere distinguir entre la fecha del evento y la fecha de acción requerida.';
+    txt.innerHTML = 'El aviso menciona varias fechas. La cena es el 18 de marzo, pero el límite para confirmar asistencia es el 16 de marzo. La pregunta pide la fecha de acción requerida, no la del evento.<br><br><strong style="color:#c0392b">Este tipo de error es el que hace que muchos candidatos pierdan nivel.</strong> No es falta de inglés. Es falta de precisión en la interpretación — y el evaluador lo cuenta.';
   }
 
   fb.style.display = 'block';
