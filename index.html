@@ -411,21 +411,32 @@ footer{background:var(--txb);padding:40px 5vw;text-align:center}
   .como-funciona-grid{grid-template-columns:1fr !important}
 }
 </style>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPJ367DRKD"></script>
+  <!-- Analytics — se cargan solo tras consentimiento de cookies -->
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-VPJ367DRKD');
-  </script>
-  <!-- Microsoft Clarity — reemplazar CLARITY_PROJECT_ID con el ID real -->
-  <script type="text/javascript">
-  (function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window,document,"clarity","script","w75bpq3his");
+  function slp_load_analytics() {
+    // Google Analytics
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VPJ367DRKD';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-VPJ367DRKD');
+    // Microsoft Clarity
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,'clarity','script','w75bpq3his');
+  }
+  // Función gtag stub para que los onclick no fallen antes del consentimiento
+  window.gtag = window.gtag || function(){};
+  // Si ya aceptó antes, cargar directamente
+  if (localStorage.getItem('slp_cookie_consent') === 'accepted') {
+    slp_load_analytics();
+  }
   </script>
 </head>
 <body>
@@ -1001,8 +1012,54 @@ no puedes permitirte fallar por no entender cómo te evalúan.
 <footer>
   <div class="footer-logo">SLP PASS</div>
   <div class="footer-sub">STANAG 6001 · NATO LANGUAGE PROFICIENCY</div>
-  <p class="footer-note">© 2026 SLP PASS · slppass.vercel.app</p>
+  <p class="footer-note">© 2026 SLP PASS · slppass.es</p>
+  <p style="margin-top:10px;font-size:11px;color:rgba(255,255,255,.4)">
+    <a href="/cookies/" style="color:rgba(255,255,255,.5);text-decoration:none;margin-right:12px">Política de cookies</a>
+    <a href="/privacidad/" style="color:rgba(255,255,255,.5);text-decoration:none">Política de privacidad</a>
+  </p>
 </footer>
+
+<!-- ── BANNER COOKIES ── -->
+<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;
+  background:#0e1820;border-top:2px solid #4d6b3a;padding:16px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+  <p style="font-size:13px;color:rgba(255,255,255,.8);line-height:1.6;margin:0;max-width:700px">
+    Usamos cookies analíticas (Google Analytics, Microsoft Clarity) para mejorar la web.
+    No se usan para publicidad. Puedes aceptar o rechazar su uso.
+    <a href="/cookies/" style="color:#4d6b3a;text-decoration:underline">Más información</a>
+  </p>
+  <div style="display:flex;gap:10px;flex-shrink:0">
+    <button onclick="slp_reject_cookies()" style="padding:9px 18px;background:transparent;
+      border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.7);
+      font-family:'Rajdhani',sans-serif;font-size:12px;letter-spacing:1px;
+      text-transform:uppercase;cursor:pointer">
+      Rechazar
+    </button>
+    <button onclick="slp_accept_cookies()" style="padding:9px 18px;background:#4d6b3a;
+      border:none;color:#fff;font-family:'Rajdhani',sans-serif;font-size:12px;
+      letter-spacing:1px;text-transform:uppercase;cursor:pointer">
+      Aceptar
+    </button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var banner = document.getElementById('cookieBanner');
+  var consent = localStorage.getItem('slp_cookie_consent');
+  if (!consent) banner.style.display = 'flex';
+
+  window.slp_accept_cookies = function() {
+    localStorage.setItem('slp_cookie_consent', 'accepted');
+    banner.style.display = 'none';
+    slp_load_analytics();
+  };
+  window.slp_reject_cookies = function() {
+    localStorage.setItem('slp_cookie_consent', 'rejected');
+    banner.style.display = 'none';
+  };
+})();
+</script>
 
 <script>
 // ── EJERCICIO INTERACTIVO ─────────────────────────────────────────────────
