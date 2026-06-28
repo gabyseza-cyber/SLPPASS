@@ -1151,17 +1151,19 @@ document.addEventListener('click', function(e) {
   if (!e.target.classList.contains('diag-opt')) return;
 
   var q = e.target.getAttribute('data-q');
+  var VALID_Q = ['q1','q2','q3','q4'];
+  if (!VALID_Q.includes(q)) return;
 
   // quitar selección previa
-  document.querySelectorAll('.diag-opt[data-q="' + q + '"]').forEach(function(btn){
-    btn.classList.remove('selected');
+  document.querySelectorAll('.diag-opt').forEach(function(btn){
+    if (btn.getAttribute('data-q') === q) btn.classList.remove('selected');
   });
 
   // marcar seleccionado
   e.target.classList.add('selected');
 
   // guardar valor
-  diagnosticAnswers[q] = parseInt(e.target.getAttribute('data-value'));
+  diagnosticAnswers[q] = parseInt(e.target.getAttribute('data-value'), 10);
 
   // activar botón si todo respondido
   var ready = Object.values(diagnosticAnswers).every(v => v !== null);
@@ -1169,7 +1171,7 @@ document.addEventListener('click', function(e) {
 });
 
 const params = new URLSearchParams(window.location.search);
-const source = params.get('source') || 'direct';
+const source = (params.get('source') || 'direct').replace(/[^a-zA-Z0-9_-]/g, '').slice(0, 50);
 document.getElementById('diagBtn').addEventListener('click', function() {
   gtag('event','diagnostic_completed',{ source: source });
 
@@ -1239,7 +1241,7 @@ document.getElementById('diagBtn').addEventListener('click', function() {
 <!-- ── BARRA STICKY MÓVIL ── -->
 <div id="stickyBar" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:199;
   background:var(--ol);padding:12px 16px;
-  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  align-items:center;justify-content:space-between;gap:10px;
   box-shadow:0 -2px 12px rgba(0,0,0,.18)">
   <div style="font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;
     color:#fff;letter-spacing:.5px;line-height:1.2">

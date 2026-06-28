@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /gracias/
 
-Sitemap: https://slppass.vercel.app/sitemap.xml
+Sitemap: https://slppass.es/sitemap.xml
