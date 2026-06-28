@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo preparar el STANAG 6001 sin academia: los 3 criterios que el evaluador usa — SLP PASS</title>
+<meta name="description" content="Guía práctica para preparar el STANAG 6001. Los tres criterios reales que usa el evaluador — coherencia discursiva, densidad de error e interacción — y cómo trabajarlos.">
+<link rel="canonical" href="https://slppass.es/blog/preparar-stanag-6001-sin-academia/">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Cómo preparar el STANAG 6001 sin academia: los 3 criterios que el evaluador usa">
+<meta property="og:description" content="Guía práctica para preparar el STANAG 6001 desde los criterios reales del evaluador, no el inglés general.">
+<meta property="og:image" content="https://slppass.es/logo.png">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-06-28">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f2ede2;--wh:#ffffff;--lt:#f8f5ef;
+  --bdr:#d8d2c6;--tx:#1a2630;--txd:#6a7a88;--txb:#0e1820;
+  --ol:#4d6b3a;--old:#3a5229;--oll:#edf2e8;
+  --gd:#b8920a;
+  --nav-h:64px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:'Lato',sans-serif;line-height:1.6}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.97);
+  border-bottom:2px solid var(--ol);height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;padding:0 5vw;
+  box-shadow:0 2px 12px rgba(0,0,0,.07)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-emblem{width:34px;height:34px;background:var(--ol);display:flex;align-items:center;
+  justify-content:center;color:#fff;font-size:15px;flex-shrink:0}
+.nav-name{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;
+  color:var(--old);letter-spacing:3px}
+.nav-sub{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--txd);
+  letter-spacing:2px;margin-top:-3px}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-link{font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--txd);text-decoration:none;transition:color .2s}
+.nav-link:hover,.nav-link.active{color:var(--ol)}
+.nav-cta{background:var(--ol);color:#fff;padding:9px 20px;
+  font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--old)}
+.nav-burger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px;flex-shrink:0}
+.nav-burger span{display:block;width:22px;height:2px;background:var(--ol);transition:all .25s}
+.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mobile{display:none;position:fixed;top:var(--nav-h);left:0;right:0;z-index:99;
+  background:rgba(255,255,255,.98);border-bottom:2px solid var(--ol);
+  padding:8px 5vw 20px;flex-direction:column;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.nav-mobile.open{display:flex}
+.nav-mobile-link{font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;color:var(--txd);
+  text-decoration:none;padding:14px 0;border-bottom:1px solid var(--bdr);transition:color .2s}
+.nav-mobile-link:hover{color:var(--ol)}
+.nav-mobile-cta{margin-top:16px;padding:13px;background:var(--ol);color:#fff;
+  font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;text-decoration:none;text-align:center}
+.article-wrap{max-width:720px;margin:0 auto;padding:calc(var(--nav-h) + 48px) 5vw 80px}
+.breadcrumb{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:2px;
+  color:var(--txd);text-transform:uppercase;margin-bottom:28px;
+  display:flex;align-items:center;gap:8px}
+.breadcrumb a{color:var(--txd);text-decoration:none}
+.breadcrumb a:hover{color:var(--ol)}
+.breadcrumb-sep{color:var(--bdr)}
+.article-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.article-tag{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:2px;
+  color:var(--ol);text-transform:uppercase;padding:3px 10px;
+  border:1px solid var(--ol);background:var(--oll)}
+.article-h1{font-family:'Rajdhani',sans-serif;font-size:clamp(26px,5vw,40px);
+  font-weight:700;color:var(--txb);letter-spacing:1px;line-height:1.1;
+  margin-bottom:20px;text-transform:uppercase}
+.article-byline{font-family:'Share Tech Mono',monospace;font-size:10px;
+  letter-spacing:2px;color:var(--txd);margin-bottom:36px;
+  padding-bottom:24px;border-bottom:2px solid var(--ol);
+  display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.byline-sep{color:var(--bdr)}
+.article-body{font-size:17px;color:var(--tx);line-height:1.85;font-weight:300}
+.article-body p{margin-bottom:20px;text-align:justify}
+.article-body h2{font-family:'Rajdhani',sans-serif;font-size:24px;font-weight:700;
+  color:var(--txb);letter-spacing:1px;text-transform:uppercase;
+  margin:44px 0 16px;padding-top:16px;border-top:1px solid var(--bdr)}
+.article-body strong{color:var(--txb);font-weight:700}
+.highlight{background:var(--lt);border:1px solid var(--bdr);
+  border-left:4px solid var(--ol);padding:20px 24px;margin:28px 0}
+.highlight p{margin:0;font-size:15px;color:var(--txd);line-height:1.7;text-align:justify}
+.highlight strong{color:var(--txb)}
+.cta-box{background:var(--old);padding:36px 32px;margin:48px 0 0;text-align:center}
+.cta-pretitle{font-family:'Share Tech Mono',monospace;font-size:10px;
+  letter-spacing:3px;color:var(--gd);text-transform:uppercase;margin-bottom:12px}
+.cta-box h3{font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;
+  color:#fff;letter-spacing:1px;margin-bottom:12px;text-transform:uppercase}
+.cta-box p{font-size:14px;color:rgba(255,255,255,.65);margin-bottom:24px;
+  line-height:1.6;max-width:440px;margin-left:auto;margin-right:auto}
+.cta-btn{display:inline-block;padding:13px 32px;background:var(--gd);
+  color:#0e1820;font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+.cta-btn:hover{background:#c8a020}
+.back-link{display:inline-flex;align-items:center;gap:8px;margin-top:48px;
+  font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:2px;
+  color:var(--txd);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.back-link:hover{color:var(--ol)}
+footer{background:var(--txb);padding:40px 5vw;text-align:center}
+.footer-logo{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;
+  color:var(--gd);letter-spacing:3px;margin-bottom:8px}
+.footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:16px}
+.footer-link{font-family:'Share Tech Mono',monospace;font-size:10px;
+  letter-spacing:2px;color:rgba(255,255,255,.4);text-decoration:none;text-transform:uppercase}
+.footer-link:hover{color:rgba(255,255,255,.7)}
+.footer-note{font-size:12px;color:rgba(255,255,255,.25)}
+@media(max-width:640px){
+  nav{padding:0 4vw}
+  .nav-links .nav-link,.nav-links .nav-cta{display:none}
+  .nav-burger{display:flex}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="nav-emblem">⚑</div>
+    <div>
+      <div class="nav-name">SLP PASS</div>
+      <div class="nav-sub">STANAG 6001 · NATO</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Inicio</a>
+    <a href="/blog/" class="nav-link active">Blog</a>
+    <a href="/curso/" class="nav-link">Curso</a>
+    <a href="/sesion-diagnostico/" class="nav-link">Sesión</a>
+    <a href="https://calendly.com/slppass/30min" target="_blank" rel="noopener noreferrer" class="nav-cta">RESERVAR SESIÓN</a>
+    <button class="nav-burger" id="navBurger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="/" class="nav-mobile-link">Inicio</a>
+  <a href="/blog/" class="nav-mobile-link">Blog</a>
+  <a href="/curso/" class="nav-mobile-link">Curso</a>
+  <a href="/sesion-diagnostico/" class="nav-mobile-link">Sesión</a>
+  <a href="https://calendly.com/slppass/30min" target="_blank" rel="noopener noreferrer" class="nav-mobile-cta">RESERVAR SESIÓN</a>
+</div>
+
+<main class="article-wrap">
+
+  <div class="breadcrumb">
+    <a href="/">Inicio</a>
+    <span class="breadcrumb-sep">·</span>
+    <a href="/blog/">Blog</a>
+    <span class="breadcrumb-sep">·</span>
+    <span>Preparar STANAG 6001</span>
+  </div>
+
+  <div class="article-tags">
+    <span class="article-tag">Speaking</span>
+    <span class="article-tag">Criterios</span>
+    <span class="article-tag">SLP 2</span>
+  </div>
+
+  <h1 class="article-h1">Cómo preparar el STANAG 6001 sin academia:<br>los 3 criterios que el evaluador realmente usa</h1>
+
+  <div class="article-byline">
+    <span>Evaluador Acreditado SLP PASS</span>
+    <span class="byline-sep">·</span>
+    <span>Junio 2026</span>
+    <span class="byline-sep">·</span>
+    <span>6 min de lectura</span>
+  </div>
+
+  <div class="article-body">
+
+    <p>La mayoría de los candidatos que suspenden el STANAG 6001 no suspenden por falta de inglés. Suspenden porque preparan el examen equivocado.</p>
+
+    <p>El STANAG 6001 no es un examen de inglés general. Es un protocolo de evaluación con descriptores específicos que el evaluador aplica de forma sistemática. Saber inglés es necesario, pero no suficiente. Lo que decide el nivel es cómo el evaluador te percibe según esos descriptores — y la mayoría de candidatos no los conocen.</p>
+
+    <h2>Los 3 criterios que más separan SLP 1 de SLP 2</h2>
+
+    <p>El evaluador no puntúa por impresión general. Aplica criterios precisos en cuatro competencias: listening, reading, speaking y writing. Aquí los tres que más candidatos ignoran y que más directamente determinan si obtienes SLP 1 o SLP 2.</p>
+
+    <h2>Criterio 1 — Coherencia discursiva</h2>
+
+    <p>El evaluador no solo escucha lo que dices. Evalúa si lo que dices tiene estructura.</p>
+
+    <p>En el oral, cada respuesta se analiza según tres elementos: ¿introduces el tema?, ¿lo desarrollas con ejemplos o argumentos?, ¿lo cierras con una conclusión? Un candidato con nivel B2 real puede obtener SLP 1 si sus respuestas son buenas individualmente pero dispersas como conjunto. Un candidato con nivel B1 puede llegar a SLP 2 si estructura bien cada respuesta.</p>
+
+    <div class="highlight">
+      <p><strong>Lo que penaliza:</strong> Respuestas que empiezan bien y se pierden. Cambiar de idea a mitad del argumento. No cerrar la respuesta antes de que el evaluador tenga que interrumpir. El evaluador lo registra como "falta de control del discurso" — y eso pesa más que un error gramatical puntual.</p>
+    </div>
+
+    <p>¿Cómo trabajarlo? Practica el formato: una frase de introducción del punto, dos o tres frases de desarrollo, una frase de cierre. No tiene que ser sofisticado — tiene que ser consistente. El evaluador reconoce la estructura aunque el inglés sea imperfecto.</p>
+
+    <h2>Criterio 2 — Densidad de error</h2>
+
+    <p>No te penalizan por cometer errores. Te penalizan por la frecuencia y el patrón.</p>
+
+    <p>El evaluador analiza muestras de habla y registra errores por unidad de texto. No es un criterio binario — es un análisis de densidad. Dos errores graves recurrentes en cien palabras pueden costarte bajar de SLP 2 a SLP 1, aunque el resto de la respuesta sea impecable.</p>
+
+    <p>El problema más común: los candidatos cometemos siempre los mismos errores y no lo sabemos. Los errores en artículos (<em>a/an/the</em>), la concordancia verbal en tercera persona, las preposiciones fijas. Son errores que el evaluador marca como "patrón", no como descuido puntual — y eso cambia cómo se pondera en la rúbrica.</p>
+
+    <div class="highlight">
+      <p><strong>Cómo identificarlo:</strong> Grábate hablando durante dos minutos sobre cualquier tema. Transcribe. Cuenta cuántas veces cometes el mismo error. Si aparece más de una vez en cien palabras, es un patrón que el evaluador va a detectar — y que puedes eliminar antes del examen si lo identificas a tiempo.</p>
+    </div>
+
+    <h2>Criterio 3 — Interacción y gestión de la presión</h2>
+
+    <p>El momento que más separa niveles no es cuando el candidato habla libremente. Es cuando el evaluador interrumpe, reformula la pregunta o pide más detalle.</p>
+
+    <p>En el SLP 2, el evaluador espera que el candidato pueda: recuperarse de una interrupción sin perder el hilo, reformular o matizar su respuesta cuando se le pide, y dar más detalle sin repetirse. Esto no es una habilidad de inglés general — es una habilidad específica del formato del examen, y se entrena de forma específica.</p>
+
+    <div class="highlight">
+      <p><strong>Lo que penaliza:</strong> Respuestas mínimas tras una interrupción (<em>"Yes", "I agree", "That's right"</em>). Perder completamente el hilo cuando el evaluador reorienta la pregunta. No ser capaz de ampliar cuando se pide, limitándose a repetir lo que ya se dijo. El evaluador lo registra como "interacción limitada" — uno de los criterios más directamente vinculados al nivel.</p>
+    </div>
+
+    <p>¿Cómo practicarlo? Simula interrupciones. Mientras ensayas, pide a alguien que te corte a mitad de la respuesta y reformule la pregunta. La primera vez que lo experimentes no puede ser en el examen real.</p>
+
+    <h2>Por dónde empezar</h2>
+
+    <p>Conocer estos criterios es el primer paso. El segundo es saber cuáles te afectan a ti específicamente.</p>
+
+    <p>Cada candidato falla en puntos distintos. Alguien con buena gramática puede perder nivel por falta de estructura discursiva. Alguien con inglés más básico puede compensarlo con respuestas bien organizadas y gestión clara de la interacción. No hay una preparación genérica que funcione — hay una preparación ajustada a tu punto de partida.</p>
+
+    <p>La sesión de diagnóstico identifica en cuál de estos criterios estás más débil y te dice exactamente qué trabajar — o si ya estás en zona de aprobado.</p>
+
+    <div class="cta-box">
+      <div class="cta-pretitle">Siguiente paso</div>
+      <h3>¿Cuál de estos criterios es tu punto débil?</h3>
+      <p>En 30 minutos de diagnóstico identificamos exactamente dónde falla tu nivel según los criterios del evaluador. Sales sabiendo qué trabajar — o si ya estás listo.</p>
+      <a href="https://calendly.com/slppass/30min" target="_blank" rel="noopener noreferrer" class="cta-btn">RESERVAR DIAGNÓSTICO — 35€</a>
+      <p style="margin-top:16px;font-size:13px;color:rgba(255,255,255,.5)">
+        <a href="/curso/" style="color:rgba(255,255,255,.6);text-decoration:none">Ver el programa del curso →</a>
+      </p>
+    </div>
+
+    <a href="/blog/" class="back-link">← Volver al blog</a>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-logo">SLP PASS</div>
+  <div class="footer-links">
+    <a href="/sesion-diagnostico/" class="footer-link">Sesión diagnóstico</a>
+    <a href="/blog/" class="footer-link">Blog</a>
+    <a href="/curso/" class="footer-link">Curso</a>
+  </div>
+  <p class="footer-note">© 2026 SLP PASS · slppass.es</p>
+  <p class="footer-note" style="margin-top:8px">
+    <a href="/cookies/" class="footer-link">Política de cookies</a>
+    &nbsp;·&nbsp;
+    <a href="/privacidad/" class="footer-link">Política de privacidad</a>
+  </p>
+</footer>
+
+<script>
+(function(){
+  var burger=document.getElementById('navBurger');
+  var menu=document.getElementById('navMobile');
+  if(!burger||!menu)return;
+  burger.addEventListener('click',function(){menu.classList.toggle('open');burger.classList.toggle('open');});
+})();
+</script>
+</body>
+</html>
