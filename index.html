@@ -832,40 +832,49 @@ At what time will the briefing actually take place?
   <p style="margin-top:12px; font-size:15px; font-weight:700; color:#c0392b; text-align:center; letter-spacing:.3px">
     Si te presentas sin saber esto, vas a ciegas.
   </p>
+
+  <!-- ── LEAD MAGNET ── -->
+  <div id="diagEmailCapture" style="margin-top:24px;background:var(--lt);border:1px solid var(--bdr);border-left:3px solid var(--ol);padding:20px">
+    <div style="font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:3px;color:var(--ol);text-transform:uppercase;margin-bottom:6px">Gratis</div>
+    <p style="font-size:14px;font-weight:700;color:var(--txb);margin-bottom:3px">Recibe tu plan de preparación personalizado</p>
+    <p style="font-size:13px;color:var(--txd);margin-bottom:12px">En 24h recibes un análisis de tus respuestas y un plan concreto para el perfil que necesitas.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <input type="email" id="diagEmail" placeholder="tu@email.com" style="flex:1;min-width:180px;padding:10px 14px;border:1px solid var(--bdr);font-family:'Lato',sans-serif;font-size:14px;color:var(--tx);outline:none;background:#fff">
+      <button onclick="slpDiagEmailSubmit()" style="padding:10px 18px;background:var(--ol);color:#fff;border:none;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;white-space:nowrap">ENVIAR PLAN</button>
+    </div>
+  </div>
+  <div id="diagEmailSuccess" style="display:none;margin-top:14px;padding:14px 16px;background:var(--oll);border:1px solid var(--ol);text-align:center">
+    <span style="font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;color:var(--old)">✓ Enviado — revisa tu email en las próximas 24h</span>
+  </div>
+
+  <div style="margin:20px 0;display:flex;align-items:center;gap:10px">
+    <div style="flex:1;height:1px;background:var(--bdr)"></div>
+    <span style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--txd);letter-spacing:2px;white-space:nowrap">O CONTINÚA DIRECTAMENTE</span>
+    <div style="flex:1;height:1px;background:var(--bdr)"></div>
+  </div>
+
+  <!-- ── TRIPWIRE 19€ ── -->
+  <a href="/guia-stanag-2222/"
+     onclick="gtag('event','click_tripwire',{location:'diagnostico',source: source});"
+     style="display:block;padding:13px;border:1.5px solid var(--gd);color:var(--gd);text-align:center;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px;letter-spacing:1px;text-decoration:none;text-transform:uppercase;background:transparent">
+    GUÍA DE PREPARACIÓN STANAG 2222 — 19€
+    <div style="font-size:11px;font-weight:400;margin-top:3px;opacity:.8">PDF completo · descarga inmediata</div>
+  </a>
+
+  <!-- ── DIAGNÓSTICO 35€ ── -->
   <a href="https://calendly.com/slppass/30min"
      target="_blank" rel="noopener noreferrer"
      onclick="gtag('event','click_calendly',{location:'diagnostico',source: source});"
-     style="
-       display:block;
-       margin-top:20px;
-       padding:14px;
-       background:#4d6b3a;
-       color:#fff;
-       text-align:center;
-       font-weight:700;
-       text-decoration:none;
-       letter-spacing:1px;
-     ">
-    VER MI NIVEL REAL CON UN EVALUADOR — 35€
-    <div style="font-size:12px;font-weight:400;margin-top:4px;opacity:.85">
-      30 min · evaluación directa · diagnóstico claro
-    </div>
+     style="display:block;margin-top:10px;padding:14px;background:#4d6b3a;color:#fff;text-align:center;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:1px;text-transform:uppercase">
+    DIAGNÓSTICO PERSONALIZADO CON EL EVALUADOR — 35€
+    <div style="font-size:12px;font-weight:400;margin-top:4px;opacity:.85">30 min · Videollamada · Garantía de devolución</div>
   </a>
-
-  <p style="margin-top:12px; font-size:13px; color:#6a7a88; text-align:center">
-    ¿Prefieres entender primero cómo funciona?
-  </p>
-
-  <a href="#sesion"
-   style="display:block; margin-top:6px; text-align:center; color:#4d6b3a; font-weight:700; text-decoration:none;">
-  VER QUÉ INCLUYE LA SESIÓN
-</a>
 
   <a href="https://wa.me/34620581881?text=Hola,%20he%20hecho%20el%20diagn%C3%B3stico%20de%20SLP%20PASS%20y%20quiero%20resolver%20una%20duda%20antes%20de%20reservar"
      target="_blank" rel="noopener noreferrer"
      onclick="gtag('event','click_whatsapp',{location:'diagnostico',source: source});"
-     style="display:block; margin-top:12px; padding:14px; border:1.5px solid #4d6b3a; color:#4d6b3a; text-align:center; font-weight:700; text-decoration:none; letter-spacing:1px; background:transparent;">
-    RESOLVER DUDA RÁPIDA POR WHATSAPP
+     style="display:block;margin-top:10px;padding:13px;border:1px solid #4d6b3a;color:#4d6b3a;text-align:center;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:13px;text-decoration:none;letter-spacing:1px;text-transform:uppercase;background:transparent">
+    RESOLVER DUDA POR WHATSAPP
   </a>
 
 </div>
@@ -1226,23 +1235,44 @@ no puedes permitirte fallar por no entender cómo te evalúan.
 </section>
 
 <!-- ── CTA FINAL ─────────────────────────────────────────────────────────── -->
-<section style="background:var(--ol);padding:56px 5vw;text-align:center">
-  <div style="max-width:600px;margin:0 auto">
-    <p style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:4px;color:rgba(255,255,255,.6);text-transform:uppercase;margin-bottom:16px">Diagnóstico STANAG 6001</p>
-    <h2 style="font-family:'Rajdhani',sans-serif;font-size:clamp(24px,4vw,36px);font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;line-height:1.15;margin-bottom:20px">
-      Si no sabes en qué nivel estás,<br>no puedes prepararte bien.
+<style>@media(max-width:640px){.cta-ladder{grid-template-columns:1fr !important}}</style>
+<section style="background:var(--txb);padding:64px 5vw">
+  <div style="max-width:780px;margin:0 auto;text-align:center">
+    <p style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:4px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-bottom:14px">Elige tu punto de entrada</p>
+    <h2 style="font-family:'Rajdhani',sans-serif;font-size:clamp(22px,4vw,34px);font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;line-height:1.15;margin-bottom:36px">
+      La preparación que decides hoy<br>define tu carrera mañana.
     </h2>
-    <p style="font-size:15px;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:32px">
-      30 minutos con el evaluador. Diagnóstico real. Plan concreto.
-    </p>
-    <a href="https://calendly.com/slppass/30min" target="_blank" rel="noopener noreferrer"
-       onclick="gtag('event','click_calendly',{location:'cta_final',source: source});"
-       style="display:inline-block;padding:16px 36px;background:var(--gd);color:#1a2000;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:15px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;">
-      RESERVAR DIAGNÓSTICO — 35€
-    </a>
-    <p style="margin-top:14px;font-size:13px;color:rgba(255,255,255,.5)">
-      Garantía de devolución si no obtienes un diagnóstico claro.
-    </p>
+
+    <div class="cta-ladder" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;text-align:left">
+
+      <!-- TRIPWIRE 19€ -->
+      <div style="border:1px solid rgba(255,255,255,.12);padding:28px 24px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:3px;color:var(--gd);text-transform:uppercase;margin-bottom:10px">Empieza aquí</div>
+        <div style="font-family:'Rajdhani',sans-serif;font-size:21px;font-weight:700;color:#fff;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Guía STANAG 2222</div>
+        <p style="font-size:13px;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:16px">Los criterios reales del evaluador, los errores que bajan nivel y un plan de preparación de 4 semanas. PDF. Descarga inmediata.</p>
+        <div style="font-family:'Rajdhani',sans-serif;font-size:28px;font-weight:700;color:var(--gd);margin-bottom:16px">19€</div>
+        <a href="/guia-stanag-2222/"
+           onclick="gtag('event','click_tripwire',{location:'cta_final',source: source});"
+           style="display:block;padding:12px;border:1px solid var(--gd);color:var(--gd);font-family:'Rajdhani',sans-serif;font-weight:700;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;text-align:center">
+          VER GUÍA →
+        </a>
+      </div>
+
+      <!-- DIAGNÓSTICO 35€ -->
+      <div style="background:var(--ol);padding:28px 24px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:3px;color:rgba(255,255,255,.5);text-transform:uppercase;margin-bottom:10px">Diagnóstico directo</div>
+        <div style="font-family:'Rajdhani',sans-serif;font-size:21px;font-weight:700;color:#fff;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Sesión con el evaluador</div>
+        <p style="font-size:13px;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:16px">30 minutos de evaluación real. Sabes exactamente en qué nivel estás, qué te penaliza y qué necesitas para el perfil que buscas.</p>
+        <div style="font-family:'Rajdhani',sans-serif;font-size:28px;font-weight:700;color:var(--gd);margin-bottom:16px">35€</div>
+        <a href="https://calendly.com/slppass/30min" target="_blank" rel="noopener noreferrer"
+           onclick="gtag('event','click_calendly',{location:'cta_final',source: source});"
+           style="display:block;padding:12px;background:var(--gd);color:#0e1820;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;text-align:center">
+          RESERVAR →
+        </a>
+      </div>
+
+    </div>
+    <p style="font-size:12px;color:rgba(255,255,255,.3)">Garantía de devolución si no obtienes un diagnóstico claro en la sesión.</p>
   </div>
 </section>
 
@@ -1444,6 +1474,26 @@ document.getElementById('diagBtn').addEventListener('click', function() {
 
   document.getElementById('diagResult').style.display = 'block';
 });
+
+// ── EMAIL LEAD MAGNET ─────────────────────────────────────────────────────
+// Reemplaza esta URL con tu endpoint de Formspree: https://formspree.io/f/{ID}
+var SLP_EMAIL_ENDPOINT = 'https://formspree.io/f/REPLACE_WITH_YOUR_FORMSPREE_ID';
+
+function slpDiagEmailSubmit() {
+  var email = document.getElementById('diagEmail').value.trim();
+  if (!email || !email.includes('@')) return;
+  var capture = document.getElementById('diagEmailCapture');
+  var success = document.getElementById('diagEmailSuccess');
+  gtag('event','lead_email_submit',{location:'diagnostico',source: source});
+  fetch(SLP_EMAIL_ENDPOINT, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json','Accept': 'application/json'},
+    body: JSON.stringify({email: email})
+  }).finally(function() {
+    capture.style.display = 'none';
+    success.style.display = 'block';
+  });
+}
 </script>
 <!-- ── HAMBURGER JS ── -->
 <script>

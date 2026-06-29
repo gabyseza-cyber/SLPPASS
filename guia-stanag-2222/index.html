@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía de Preparación STANAG 2222 — SLP PASS</title>
+  <meta name="description" content="PDF completo con los criterios reales del evaluador STANAG 6001, los errores que bajan nivel y un plan de preparación de 4 semanas para conseguir el SLP 2222.">
+  <link rel="canonical" href="https://slppass.es/guia-stanag-2222/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f2ede2;--lt:#f8f5ef;--bdr:#d8d2c6;--tx:#1a2630;--txd:#6a7a88;--txb:#0e1820;--ol:#4d6b3a;--old:#3a5229;--oll:#edf2e8;--gd:#b8920a;--nav-h:84px}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:'Lato',sans-serif;line-height:1.6;font-size:16px}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.97);border-bottom:2px solid var(--ol);height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+.nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+.nav-name{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:var(--old);letter-spacing:3px}
+.nav-sub{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--txd);letter-spacing:2px;margin-top:-3px}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-link{font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--txd);text-decoration:none;transition:color .2s}
+.nav-link:hover,.nav-link.active{color:var(--ol)}
+.nav-cta{background:var(--ol);color:#fff;border:none;padding:9px 20px;font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--old)}
+.nav-burger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px;flex-shrink:0}
+.nav-burger span{display:block;width:22px;height:2px;background:var(--ol);transition:all .25s}
+.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mobile{display:none;position:fixed;top:var(--nav-h);left:0;right:0;z-index:99;background:rgba(255,255,255,.98);border-bottom:2px solid var(--ol);padding:8px 5vw 20px;flex-direction:column;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.nav-mobile.open{display:flex}
+.nav-mobile-link{font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--txd);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--bdr);transition:color .2s}
+.nav-mobile-link:hover{color:var(--ol)}
+.nav-mobile-cta{margin-top:16px;padding:13px;background:var(--ol);color:#fff;font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;text-align:center}
+footer{background:var(--txb);padding:32px 5vw;text-align:center}
+.footer-logo{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:var(--gd);letter-spacing:3px;margin-bottom:6px}
+.footer-note{font-size:12px;color:rgba(255,255,255,.2)}
+.footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:12px;flex-wrap:wrap}
+.footer-link{font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(255,255,255,.4);letter-spacing:2px;text-decoration:none;text-transform:uppercase}
+@media(max-width:640px){.nav-links .nav-link,.nav-links .nav-cta{display:none}.nav-burger{display:flex}.guia-grid{grid-template-columns:1fr !important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="/logo.png" alt="SLP PASS" style="height:52px;object-fit:contain">
+    <div>
+      <div class="nav-name">SLP PASS</div>
+      <div class="nav-sub">STANAG 6001 · NATO</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Inicio</a>
+    <a href="/sesion-diagnostico/" class="nav-link">Diagnóstico</a>
+    <a href="/aprender/" class="nav-link">Aprender</a>
+    <a href="/blog/" class="nav-link">Blog</a>
+    <a href="/sobre/" class="nav-link">Sobre SLP PASS</a>
+    <a href="https://calendly.com/slppass/30min" target="_blank" rel="noopener noreferrer" class="nav-cta">RESERVAR</a>
+    <button class="nav-burger" id="navBurger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="/" class="nav-mobile-link">Inicio</a>
+  <a href="/sesion-diagnostico/" class="nav-mobile-link">Diagnóstico</a>
+  <a href="/aprender/" class="nav-mobile-link">Aprender</a>
+  <a href="/blog/" class="nav-mobile-link">Blog</a>
+  <a href="/sobre/" class="nav-mobile-link">Sobre SLP PASS</a>
+  <a href="https://calendly.com/slppass/30min" target="_blank" rel="noopener noreferrer" class="nav-mobile-cta">RESERVAR</a>
+</div>
+
+<!-- HERO PRODUCTO -->
+<div style="background:var(--txb);padding:80px 5vw 60px;margin-top:var(--nav-h)">
+  <div style="max-width:860px;margin:0 auto">
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:4px;color:var(--gd);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:10px">
+      <span style="width:24px;height:2px;background:var(--gd);display:inline-block"></span>
+      Recurso PDF · Descarga inmediata
+    </div>
+    <h1 style="font-family:'Rajdhani',sans-serif;font-size:clamp(26px,4vw,44px);font-weight:700;color:#fff;letter-spacing:2px;line-height:1.1;margin-bottom:16px;text-transform:uppercase">
+      Guía de Preparación<br>STANAG 2222
+    </h1>
+    <p style="font-size:17px;color:rgba(255,255,255,.65);font-weight:300;line-height:1.7;max-width:600px;margin-bottom:32px">
+      Lo que el evaluador mira — y lo que la mayoría de candidatos no sabe que está fallando. Con plan de preparación de 4 semanas incluido.
+    </p>
+
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:28px">
+      <span style="font-family:'Rajdhani',sans-serif;font-size:48px;font-weight:700;color:var(--gd)">19€</span>
+      <span style="font-size:14px;color:rgba(255,255,255,.4)">Pago único · Acceso inmediato · PDF descargable</span>
+    </div>
+
+    <!-- STRIPE PAYMENT LINK — reemplaza href con tu link de Stripe Dashboard > Products > Payment Links -->
+    <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_STRIPE_PAYMENT_LINK"
+       onclick="gtag('event','click_tripwire_buy',{location:'guia_hero'});"
+       style="display:inline-block;padding:16px 40px;background:var(--gd);color:#0e1820;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:15px;letter-spacing:2px;text-transform:uppercase;text-decoration:none">
+      COMPRAR AHORA — 19€
+    </a>
+    <p style="margin-top:12px;font-size:12px;color:rgba(255,255,255,.3)">
+      Pago seguro con Stripe · Tarjeta o Bizum · Recibes el PDF por email en minutos
+    </p>
+  </div>
+</div>
+
+<!-- CONTENIDO DE LA GUÍA -->
+<main style="max-width:860px;margin:0 auto;padding:64px 5vw">
+
+  <div style="margin-bottom:48px">
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--ol);text-transform:uppercase;margin-bottom:12px">Qué incluye</div>
+    <h2 style="font-family:'Rajdhani',sans-serif;font-size:clamp(22px,3vw,30px);font-weight:700;color:var(--txb);letter-spacing:1px;text-transform:uppercase;margin-bottom:28px">Todo lo que necesitas saber antes de presentarte</h2>
+
+    <div class="guia-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+
+      <div style="background:var(--lt);border:1px solid var(--bdr);border-left:3px solid var(--ol);padding:20px">
+        <div style="font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;color:var(--txb);letter-spacing:.5px;margin-bottom:8px">Cómo evalúa el evaluador</div>
+        <p style="font-size:14px;color:var(--txd);line-height:1.7">Los descriptores holísticos del STANAG 6001 explicados en español, sin jerga técnica. Sabes exactamente qué aspecto tiene un nivel 2 real.</p>
+      </div>
+
+      <div style="background:var(--lt);border:1px solid var(--bdr);border-left:3px solid var(--ol);padding:20px">
+        <div style="font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;color:var(--txb);letter-spacing:.5px;margin-bottom:8px">Las 4 destrezas del 2222</div>
+        <p style="font-size:14px;color:var(--txd);line-height:1.7">Qué se evalúa en Speaking, Listening, Reading y Writing. Qué puede hacer un candidato de nivel 2 y qué no puede hacer todavía.</p>
+      </div>
+
+      <div style="background:var(--lt);border:1px solid var(--bdr);border-left:3px solid var(--ol);padding:20px">
+        <div style="font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;color:var(--txb);letter-spacing:.5px;margin-bottom:8px">Los 7 errores que bajan nivel</div>
+        <p style="font-size:14px;color:var(--txd);line-height:1.7">Los patrones de error más frecuentes en candidatos españoles. Por qué ocurren, cuánto penalizan y cómo corregirlos antes del examen.</p>
+      </div>
+
+      <div style="background:var(--lt);border:1px solid var(--bdr);border-left:3px solid var(--ol);padding:20px">
+        <div style="font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;color:var(--txb);letter-spacing:.5px;margin-bottom:8px">Plan de 4 semanas</div>
+        <p style="font-size:14px;color:var(--txd);line-height:1.7">Un plan de preparación estructurado semana a semana, adaptable a distintos perfiles y tiempos disponibles. Incluye recursos recomendados.</p>
+      </div>
+
+      <div style="background:var(--lt);border:1px solid var(--bdr);border-left:3px solid var(--ol);padding:20px">
+        <div style="font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;color:var(--txb);letter-spacing:.5px;margin-bottom:8px">Estructuras de respuesta oral</div>
+        <p style="font-size:14px;color:var(--txd);line-height:1.7">7 plantillas de respuesta para las preguntas más frecuentes del oral STANAG. Cómo construir discurso con estructura cuando el evaluador presiona.</p>
+      </div>
+
+      <div style="background:var(--lt);border:1px solid var(--bdr);border-left:3px solid var(--ol);padding:20px">
+        <div style="font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;color:var(--txb);letter-spacing:.5px;margin-bottom:8px">Checklist pre-examen</div>
+        <p style="font-size:14px;color:var(--txd);line-height:1.7">Lista de verificación para los 7 días previos al examen. Lo que debes comprobar, practicar y evitar en la semana final.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PARA QUIÉN -->
+  <div style="background:var(--txb);padding:40px;margin-bottom:48px">
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--gd);text-transform:uppercase;margin-bottom:12px">Para quién es esta guía</div>
+    <ul style="list-style:none;padding:0">
+      <li style="display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:15px;color:rgba(255,255,255,.75)"><span style="color:var(--gd);font-weight:700;flex-shrink:0">→</span>Militares que necesitan el SLP 2222 para acceder a destinos internacionales o sumar puntos en el baremo</li>
+      <li style="display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:15px;color:rgba(255,255,255,.75)"><span style="color:var(--gd);font-weight:700;flex-shrink:0">→</span>Candidatos que se han presentado antes y no entienden qué falló</li>
+      <li style="display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:15px;color:rgba(255,255,255,.75)"><span style="color:var(--gd);font-weight:700;flex-shrink:0">→</span>Quienes tienen el examen en 4-8 semanas y necesitan un plan concreto</li>
+      <li style="display:flex;align-items:flex-start;gap:12px;padding:10px 0;font-size:15px;color:rgba(255,255,255,.75)"><span style="color:var(--gd);font-weight:700;flex-shrink:0">→</span>Suboficiales, oficiales y MPTM que quieren entender el examen antes de invertir en preparación larga</li>
+    </ul>
+  </div>
+
+  <!-- CTA COMPRA -->
+  <div style="border:2px solid var(--ol);padding:40px;text-align:center;margin-bottom:48px">
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--ol);text-transform:uppercase;margin-bottom:12px">PDF · Descarga inmediata</div>
+    <h3 style="font-family:'Rajdhani',sans-serif;font-size:clamp(20px,3vw,28px);font-weight:700;color:var(--txb);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Guía de Preparación STANAG 2222</h3>
+    <div style="font-family:'Rajdhani',sans-serif;font-size:40px;font-weight:700;color:var(--ol);margin:16px 0">19€</div>
+    <!-- STRIPE PAYMENT LINK — reemplaza href con tu link de Stripe Dashboard -->
+    <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_STRIPE_PAYMENT_LINK"
+       onclick="gtag('event','click_tripwire_buy',{location:'guia_cta'});"
+       style="display:inline-block;padding:15px 40px;background:var(--ol);color:#fff;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:15px;letter-spacing:2px;text-transform:uppercase;text-decoration:none">
+      COMPRAR AHORA — 19€
+    </a>
+    <p style="margin-top:12px;font-size:13px;color:var(--txd)">Pago seguro con Stripe · Tarjeta o Bizum · Recibes el PDF por email en minutos</p>
+    <p style="margin-top:8px;font-size:13px;color:var(--txd)">
+      <strong>Garantía:</strong> Si la guía no te aporta información concreta sobre el examen, te devolvemos el dinero. Sin preguntas.
+    </p>
+  </div>
+
+  <!-- ¿NECESITAS MÁS? -->
+  <div style="background:var(--old);padding:32px;text-align:center">
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--gd);text-transform:uppercase;margin-bottom:10px">¿Necesitas más?</div>
+    <h3 style="font-family:'Rajdhani',sans-serif;font-size:clamp(18px,3vw,24px);font-weight:700;color:#fff;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px">Diagnóstico personalizado con el evaluador</h3>
+    <p style="font-size:14px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:18px;max-width:500px;margin-left:auto;margin-right:auto">
+      La guía te da el marco general. El diagnóstico te dice exactamente dónde estás tú y qué te puede hacer fallar en el examen.
+    </p>
+    <a href="https://calendly.com/slppass/30min" target="_blank" rel="noopener noreferrer"
+       onclick="gtag('event','click_calendly',{location:'guia_upsell'});"
+       style="display:inline-block;padding:13px 28px;background:var(--gd);color:#0e1820;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;text-decoration:none">
+      DIAGNÓSTICO CON EL EVALUADOR — 35€
+    </a>
+    <p style="margin-top:8px;font-size:12px;color:rgba(255,255,255,.4)">30 min · Videollamada · Garantía de devolución</p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-logo">SLP PASS</div>
+  <div class="footer-links">
+    <a href="/" class="footer-link">Inicio</a>
+    <a href="/aprender/" class="footer-link">Aprender</a>
+    <a href="/blog/" class="footer-link">Blog</a>
+    <a href="/sesion-diagnostico/" class="footer-link">Diagnóstico</a>
+  </div>
+  <p class="footer-note">© 2026 SLP PASS · slppass.es</p>
+</footer>
+
+<script>
+(function(){
+  var burger=document.getElementById('navBurger');
+  var menu=document.getElementById('navMobile');
+  if(!burger)return;
+  burger.addEventListener('click',function(){burger.classList.toggle('open');menu.classList.toggle('open');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){burger.classList.remove('open');menu.classList.remove('open');});});
+})();
+window.gtag = window.gtag || function(){};
+</script>
+</body>
+</html>
