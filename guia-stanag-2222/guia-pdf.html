@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía de Preparación STANAG 2222 — SLP PASS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#f2ede2;--wh:#ffffff;--lt:#f8f5ef;
+      --bdr:#d8d2c6;
+      --tx:#1a2630;--txd:#6a7a88;--txb:#0e1820;
+      --ol:#4d6b3a;--old:#3a5229;--oll:#edf2e8;
+      --gd:#b8920a;--gdl:#fdf5de;
+    }
+
+    body{
+      background:var(--bg);
+      color:var(--tx);
+      font-family:'Lato',sans-serif;
+      font-size:15px;
+      line-height:1.75;
+      max-width:780px;
+      margin:0 auto;
+      padding:0;
+    }
+
+    /* ── PORTADA ── */
+    .cover{
+      background:var(--txb);
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      padding:64px 56px;
+      page-break-after:always;
+    }
+    .cover-brand{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+    .cover-emblem{
+      width:44px;height:44px;
+      background:var(--ol);
+      display:flex;align-items:center;justify-content:center;
+      color:#fff;font-size:18px;flex-shrink:0;
+    }
+    .cover-name{
+      font-family:'Rajdhani',sans-serif;
+      font-size:20px;font-weight:700;
+      color:#fff;letter-spacing:4px;
+    }
+    .cover-sub{
+      font-family:'Share Tech Mono',monospace;
+      font-size:9px;color:rgba(255,255,255,.4);
+      letter-spacing:3px;margin-top:2px;
+    }
+    .cover-body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:80px 0 60px;}
+    .cover-label{
+      font-family:'Share Tech Mono',monospace;
+      font-size:10px;letter-spacing:4px;
+      color:var(--gd);text-transform:uppercase;margin-bottom:24px;
+    }
+    .cover-title{
+      font-family:'Rajdhani',sans-serif;
+      font-size:clamp(36px,6vw,56px);
+      font-weight:700;color:#fff;
+      letter-spacing:2px;text-transform:uppercase;
+      line-height:1.1;margin-bottom:24px;
+    }
+    .cover-title span{color:var(--gd);}
+    .cover-desc{
+      font-size:16px;color:rgba(255,255,255,.6);
+      line-height:1.7;max-width:480px;
+    }
+    .cover-footer{
+      border-top:1px solid rgba(255,255,255,.12);
+      padding-top:28px;
+      display:flex;justify-content:space-between;align-items:flex-end;
+    }
+    .cover-footer-left{
+      font-family:'Share Tech Mono',monospace;
+      font-size:10px;color:rgba(255,255,255,.3);
+      letter-spacing:2px;line-height:1.8;
+    }
+    .cover-footer-right{
+      font-family:'Rajdhani',sans-serif;
+      font-size:13px;font-weight:700;
+      color:var(--ol);letter-spacing:2px;
+    }
+
+    /* ── CONTENIDO ── */
+    .page{
+      padding:64px 56px;
+      page-break-after:always;
+    }
+    .page:last-child{page-break-after:avoid;}
+
+    .section-label{
+      font-family:'Share Tech Mono',monospace;
+      font-size:9px;letter-spacing:4px;
+      color:var(--gd);text-transform:uppercase;
+      margin-bottom:8px;
+    }
+    .section-number{
+      font-family:'Rajdhani',sans-serif;
+      font-size:11px;font-weight:700;
+      color:var(--ol);letter-spacing:3px;
+      text-transform:uppercase;margin-bottom:6px;
+    }
+    h1{
+      font-family:'Rajdhani',sans-serif;
+      font-size:clamp(24px,4vw,34px);
+      font-weight:700;color:var(--txb);
+      letter-spacing:1.5px;text-transform:uppercase;
+      line-height:1.15;margin-bottom:28px;
+      padding-bottom:16px;
+      border-bottom:2px solid var(--ol);
+    }
+    h2{
+      font-family:'Rajdhani',sans-serif;
+      font-size:18px;font-weight:700;
+      color:var(--ol);letter-spacing:1px;
+      text-transform:uppercase;
+      margin:32px 0 12px;
+    }
+    h3{
+      font-family:'Rajdhani',sans-serif;
+      font-size:15px;font-weight:700;
+      color:var(--txb);letter-spacing:0.5px;
+      text-transform:uppercase;margin:24px 0 8px;
+    }
+    p{margin-bottom:14px;color:var(--tx);}
+    p:last-child{margin-bottom:0;}
+
+    strong{color:var(--txb);font-weight:700;}
+
+    .intro-block{
+      background:var(--txb);
+      padding:28px 32px;
+      margin-bottom:32px;
+    }
+    .intro-block p{color:rgba(255,255,255,.75);margin-bottom:10px;}
+    .intro-block p:last-child{margin-bottom:0;}
+    .intro-block strong{color:#fff;}
+
+    .highlight{
+      background:var(--oll);
+      border-left:3px solid var(--ol);
+      padding:16px 20px;
+      margin:20px 0;
+    }
+    .highlight p{margin-bottom:8px;}
+    .highlight p:last-child{margin-bottom:0;}
+
+    .gold-box{
+      background:var(--gdl);
+      border-left:3px solid var(--gd);
+      padding:16px 20px;
+      margin:20px 0;
+    }
+    .gold-box p{margin-bottom:8px;}
+    .gold-box p:last-child{margin-bottom:0;}
+
+    .skill-block{
+      border:1px solid var(--bdr);
+      padding:24px 28px;
+      margin:24px 0;
+      background:var(--wh);
+    }
+    .skill-label{
+      font-family:'Share Tech Mono',monospace;
+      font-size:9px;letter-spacing:3px;color:var(--gd);
+      text-transform:uppercase;margin-bottom:6px;
+    }
+    .skill-title{
+      font-family:'Rajdhani',sans-serif;
+      font-size:17px;font-weight:700;color:var(--txb);
+      letter-spacing:1px;text-transform:uppercase;
+      margin-bottom:12px;padding-bottom:10px;
+      border-bottom:1px solid var(--bdr);
+    }
+
+    .error-list{list-style:none;padding:0;margin:12px 0;}
+    .error-list li{
+      padding:10px 0 10px 20px;
+      border-bottom:1px solid var(--bdr);
+      position:relative;font-size:14px;
+    }
+    .error-list li:last-child{border-bottom:none;}
+    .error-list li::before{
+      content:'→';
+      position:absolute;left:0;
+      color:var(--ol);font-weight:700;
+    }
+    .error-title{
+      font-family:'Rajdhani',sans-serif;
+      font-weight:700;font-size:14px;
+      color:var(--txb);letter-spacing:0.5px;
+      text-transform:uppercase;display:block;
+      margin-bottom:4px;
+    }
+
+    .week-block{
+      margin:24px 0;
+      border:1px solid var(--bdr);
+      background:var(--wh);
+    }
+    .week-header{
+      background:var(--old);
+      padding:12px 20px;
+      display:flex;align-items:baseline;gap:12px;
+    }
+    .week-num{
+      font-family:'Share Tech Mono',monospace;
+      font-size:9px;letter-spacing:3px;color:rgba(255,255,255,.5);
+      text-transform:uppercase;
+    }
+    .week-title{
+      font-family:'Rajdhani',sans-serif;
+      font-size:16px;font-weight:700;
+      color:#fff;letter-spacing:1px;text-transform:uppercase;
+    }
+    .week-body{padding:20px 24px;}
+    .week-body p{font-size:14px;margin-bottom:8px;}
+    .week-objective{
+      font-family:'Share Tech Mono',monospace;
+      font-size:10px;letter-spacing:2px;
+      color:var(--gd);text-transform:uppercase;
+      margin-bottom:12px;
+    }
+    .task-list{list-style:none;padding:0;margin:10px 0;}
+    .task-list li{
+      font-size:13px;padding:5px 0 5px 18px;
+      position:relative;color:var(--tx);
+      border-bottom:1px solid var(--bdr);
+    }
+    .task-list li:last-child{border-bottom:none;}
+    .task-list li::before{
+      content:'◌';position:absolute;left:0;
+      color:var(--ol);font-size:11px;
+    }
+
+    /* ── CTA FINAL ── */
+    .cta-block{
+      background:var(--txb);
+      padding:40px 40px;
+      margin-top:40px;
+      text-align:center;
+    }
+    .cta-label{
+      font-family:'Share Tech Mono',monospace;
+      font-size:9px;letter-spacing:4px;
+      color:var(--gd);text-transform:uppercase;margin-bottom:12px;
+    }
+    .cta-title{
+      font-family:'Rajdhani',sans-serif;
+      font-size:26px;font-weight:700;
+      color:#fff;letter-spacing:1px;
+      text-transform:uppercase;margin-bottom:12px;
+    }
+    .cta-text{font-size:14px;color:rgba(255,255,255,.6);margin-bottom:24px;line-height:1.7;}
+    .cta-btn{
+      display:inline-block;
+      background:var(--gd);color:var(--txb);
+      font-family:'Rajdhani',sans-serif;
+      font-size:13px;font-weight:700;
+      letter-spacing:2px;text-transform:uppercase;
+      padding:14px 36px;text-decoration:none;
+    }
+    .cta-detail{
+      font-family:'Share Tech Mono',monospace;
+      font-size:10px;letter-spacing:2px;
+      color:rgba(255,255,255,.3);margin-top:14px;
+    }
+
+    /* ── PRINT ── */
+    @media print{
+      body{max-width:100%;background:#f2ede2;}
+      .cover{min-height:100vh;}
+      .page{padding:48px 48px;}
+      a{text-decoration:none;color:inherit;}
+      .cta-btn{background:var(--gd) !important;color:var(--txb) !important;}
+    }
+    @page{margin:0;size:A4;}
+  </style>
+</head>
+<body>
+
+<!-- ── PORTADA ── -->
+<div class="cover">
+  <div class="cover-brand">
+    <div class="cover-emblem">✦</div>
+    <div>
+      <div class="cover-name">SLP PASS</div>
+      <div class="cover-sub">Preparación STANAG 6001</div>
+    </div>
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-label">Guía de preparación · Nivel 2222</div>
+    <h1 class="cover-title">Prepara el<br><span>STANAG 2222</span><br>sin sorpresas</h1>
+    <p class="cover-desc">Lo que evalúa realmente el examinador, los errores que cuestan el examen y un plan de 4 semanas para llegar preparado a sala.</p>
+  </div>
+
+  <div class="cover-footer">
+    <div class="cover-footer-left">
+      SLP PASS · slppass.es<br>
+      Preparación STANAG 6001 Ed. 5 · ATrainP-5
+    </div>
+    <div class="cover-footer-right">slppass.es</div>
+  </div>
+</div>
+
+<!-- ── SECCIÓN 1 ── -->
+<div class="page">
+  <div class="section-number">Sección 01</div>
+  <h1>Qué evalúa realmente el examinador</h1>
+
+  <div class="intro-block">
+    <p>El error más común antes de entrar a sala: creer que el examen mide si sabes inglés.</p>
+    <p><strong>No es eso.</strong></p>
+    <p>Cada pregunta que hace el evaluador tiene una tarea concreta detrás. No es conversación — es una prueba de nivel diseñada para verificar si cumples los descriptores específicos del STANAG 6001. El evaluador sabe exactamente qué busca antes de que abras la boca. El candidato, generalmente, no.</p>
+  </div>
+
+  <p>Esto aplica especialmente a las dos destrezas subjetivas: <strong>Speaking</strong> y <strong>Writing</strong>. Son las que el evaluador puntúa con criterio propio aplicando los descriptores del STANAG. Reading y Listening tienen un formato más estandarizado — las respuestas son correctas o incorrectas — pero Speaking y Writing son donde la diferencia entre aprobar y no aprobar depende de saber exactamente qué busca el evaluador en cada tarea.</p>
+
+  <p>Cuando el evaluador te pide que cuentes algo que hiciste el fin de semana, no le interesa tu vida. Quiere ver si controlas los tiempos verbales del pasado. Cuando te pide que describas una fotografía, no evalúa tu creatividad — evalúa si eres capaz de desarrollar un tema de forma ordenada y sostenida a partir de lo que hay delante de ti. Irte por las ramas no suma puntos. No elaborar los resta.</p>
+
+  <h2>Cómo se distingue un nivel 2 de un nivel 1</h2>
+
+  <p>El evaluador tarda muy poco en saberlo. Durante el calentamiento inicial — donde se establece el rango del candidato — ya hay señales claras.</p>
+
+  <div class="highlight">
+    <p>La principal: la <strong>capacidad de conectar frases</strong>. Un candidato de nivel 1 habla en oraciones aisladas. Un candidato de nivel 2 enlaza ideas, usa conectores, construye respuestas con más de una capa. A eso se añade el control de los tiempos verbales y el manejo de las estructuras gramaticales principales.</p>
+  </div>
+
+  <h2>Qué separa el nivel 2 del nivel 3</h2>
+
+  <p>El nivel 3 no es "más inglés" — es otro tipo de tarea. Un candidato de nivel 3 domina la gramática, pero sobre todo es capaz de hacer cosas que el nivel 2 no: defender una opinión con argumentos, construir un discurso coherente de principio a fin, mantener el registro formal bajo presión.</p>
+
+  <div class="gold-box">
+    <p>Si en el nivel 2 la pregunta es <strong>¿controla la lengua?</strong>, en el nivel 3 la pregunta es <strong>¿puede hacer algo con ella?</strong></p>
+  </div>
+</div>
+
+<!-- ── SECCIÓN 2 ── -->
+<div class="page">
+  <div class="section-number">Sección 02</div>
+  <h1>Las 4 destrezas en el nivel 2</h1>
+
+  <div class="skill-block">
+    <div class="skill-label">Destreza subjetiva</div>
+    <div class="skill-title">Speaking</div>
+    <p>El objetivo en Speaking L2 es claro: completar la tarea que plantea el evaluador y hacerse entender, aunque la gramática no sea perfecta. El evaluador no busca fluidez de nativo — busca que el candidato reconozca lo que se le está pidiendo y lo ejecute.</p>
+    <div class="highlight">
+      <p>El error que más puntos cuesta no es gramatical: es <strong>no identificar la tarea</strong>. Si el evaluador pide que cuentes algo del pasado, el tiempo verbal no es opcional — es la prueba. Usar el presente en una narración de pasado no es un error de nivel, es no haber escuchado lo que se pedía.</p>
+    </div>
+  </div>
+
+  <div class="skill-block">
+    <div class="skill-label">Destreza subjetiva</div>
+    <div class="skill-title">Writing</div>
+    <p>Las tareas de Writing en el nivel 2 son textos rutinarios y factuales: emails formales e informales, notas, informes básicos, descripciones de situaciones concretas. No se pide argumentar ni desarrollar temas abstractos — eso es nivel 3.</p>
+    <div class="highlight">
+      <p>Una respuesta brillante que no hace lo que se pide no puntúa. La <strong>ambición gramatical sin control</strong> es peor que una estructura sencilla bien ejecutada.</p>
+    </div>
+  </div>
+
+  <div class="skill-block">
+    <div class="skill-label">Destreza objetiva</div>
+    <div class="skill-title">Reading</div>
+    <p>El nivel 2 comprende textos directos sobre temas concretos y familiares. No se requiere inferencia — el STANAG 6001 es explícito en que el nivel 2 no extrae información implícita. Lo que se evalúa es la comprensión de la idea principal y los detalles concretos.</p>
+    <div class="gold-box">
+      <p><strong>La estrategia que marca la diferencia:</strong> leer las preguntas y las opciones de respuesta antes de tocar el texto. Sin excepciones. Quien entra al texto sin saber qué busca lee todo con la misma atención y se queda sin tiempo. Quien lee primero las respuestas sabe exactamente dónde mirar — el texto se convierte en una búsqueda dirigida, no en una lectura comprensiva.</p>
+    </div>
+  </div>
+
+  <div class="skill-block">
+    <div class="skill-label">Destreza objetiva</div>
+    <div class="skill-title">Listening</div>
+    <p>El nivel 2 comprende hechos y detalles concretos en discurso conectado a velocidad normal, aunque puede necesitar alguna repetición. No se evalúan matices ni subtexto.</p>
+    <div class="gold-box">
+      <p><strong>La misma regla, sin excepciones:</strong> leer todas las opciones de respuesta antes de que empiece el audio. El candidato que escucha sin saber qué tiene que detectar procesa todo por igual y llega al final sin haber retenido lo que se preguntaba. El que entra con las respuestas leídas escucha de forma activa y selectiva. La diferencia en resultados es significativa.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── SECCIÓN 3 ── -->
+<div class="page">
+  <div class="section-number">Sección 03</div>
+  <h1>Los errores que eliminan puntos</h1>
+
+  <p>Estos no son errores de nivel. Son errores de ejecución — cosas que cometen candidatos que tienen el nivel pero no saben cómo funciona la prueba.</p>
+
+  <h2>Speaking</h2>
+  <ul class="error-list">
+    <li>
+      <span class="error-title">La ese del tercero del singular</span>
+      "He go", "she speak", "it work". El evaluador lo anota cada vez. No descalifica, pero acumula y penaliza. Es el error más frecuente en candidatos hispanohablantes y el más innecesario.
+    </li>
+    <li>
+      <span class="error-title">Bloquearse cuando falla el vocabulario</span>
+      En el nivel 2 no se espera un vocabulario amplio, pero sí la capacidad de describir algo con otras palabras cuando no sale el término exacto. El candidato que se bloquea pierde más puntos que el que rodea la palabra y llega al concepto por otro camino. Esa habilidad se entrena.
+    </li>
+  </ul>
+
+  <h2>Writing</h2>
+  <ul class="error-list">
+    <li>
+      <span class="error-title">No responder a la tarea exacta</span>
+      Si se pide comparar, hay que comparar. Si se pide describir, hay que describir. Si se pide enumerar, hay que enumerar. Una respuesta brillante que no hace lo que se pide no puntúa.
+    </li>
+    <li>
+      <span class="error-title">Texto preparado que no encaja</span>
+      Llevar algo memorizado y usarlo aunque no corresponda con la tarea es el error más caro de Writing. El evaluador lo detecta de inmediato y el texto se descarta automáticamente — aunque esté perfectamente escrito. No hay puntuación parcial.
+    </li>
+    <li>
+      <span class="error-title">No llegar a la extensión requerida</span>
+      Un texto demasiado corto no puede demostrar control de la lengua. La extensión mínima no es opcional.
+    </li>
+    <li>
+      <span class="error-title">Sin estructura</span>
+      Introducción, desarrollo, cierre. No hace falta que sea sofisticado — hace falta que exista.
+    </li>
+  </ul>
+
+  <h2>Listening</h2>
+  <ul class="error-list">
+    <li>
+      <span class="error-title">No tomar notas</span>
+      El audio se escucha una vez, o con repetición muy limitada. Unas pocas anotaciones en sucio antes de que vuelva a sonar el fragmento marcan la diferencia entre recordar y adivinar.
+    </li>
+    <li>
+      <span class="error-title">No leer las opciones antes del audio</span>
+      Las opciones de respuesta se leen antes de que empiece el audio, sin excepción. El candidato que entra sin haberlas leído escucha sin saber qué buscar.
+    </li>
+  </ul>
+
+  <h2>Reading</h2>
+  <ul class="error-list">
+    <li>
+      <span class="error-title">Leer el texto antes que las preguntas</span>
+      El método correcto: leer primero las preguntas y respuestas, después hacer un escaneo dirigido del texto para localizar la información concreta. El texto no se lee — se escanea con objetivo.
+    </li>
+  </ul>
+</div>
+
+<!-- ── SECCIÓN 4 ── -->
+<div class="page">
+  <div class="section-number">Sección 04</div>
+  <h1>Plan de preparación de 4 semanas</h1>
+
+  <div class="intro-block">
+    <p><strong>Antes de empezar:</strong> este plan está diseñado para alguien que tiene una base de inglés pero lleva tiempo sin practicarlo. Si no produces inglés de forma regular o hace años que no lo tocas, el punto de partida real es una sesión de diagnóstico — el plan de 4 semanas sin saber dónde estás puede ser demasiado poco o mal enfocado.</p>
+  </div>
+
+  <div class="highlight">
+    <p><strong>Tiempo mínimo: 1 hora diaria.</strong> No hay atajo. El inglés necesita exposición constante para activarse, no sesiones intensas y esporádicas.</p>
+    <p><strong>Principio fundamental: todas las destrezas cada semana.</strong> El enfoque es integral — en cada semana entra todo, con diferente peso según la fase.</p>
+  </div>
+
+  <div class="week-block">
+    <div class="week-header">
+      <div class="week-num">Semana 01</div>
+      <div class="week-title">Base</div>
+    </div>
+    <div class="week-body">
+      <div class="week-objective">Objetivo — Asentar gramática esencial y activar vocabulario</div>
+      <ul class="task-list">
+        <li>Tiempos verbales principales: presente simple/continuo, pasado simple/continuo, futuro con <em>will</em> y <em>going to</em></li>
+        <li>Vocabulario de entornos rutinarios: trabajo, familia, rutinas, instalaciones militares, ocio</li>
+        <li>20-30 min diarios de vídeo en inglés sobre temas de interés personal — evita que el idioma se convierta en obligación</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-header">
+      <div class="week-num">Semana 02</div>
+      <div class="week-title">Destrezas receptivas</div>
+    </div>
+    <div class="week-body">
+      <div class="week-objective">Objetivo — Aplicar estrategias de Reading y Listening al formato STANAG</div>
+      <ul class="task-list">
+        <li>Reading: practicar el método — preguntas primero, escaneo del texto después. Textos B1-B2 sobre temas generales y profesionales</li>
+        <li>Listening: practicar tomar notas mientras se escucha. Podcasts cortos, noticias en inglés simplificado</li>
+        <li>Tareas STANAG L2 Reading: opción múltiple, verdadero/falso/no mencionado, localización de información concreta</li>
+        <li>Tareas STANAG L2 Listening: opción múltiple, completar notas, identificar idea principal y detalles</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-header">
+      <div class="week-num">Semana 03</div>
+      <div class="week-title">Destrezas productivas</div>
+    </div>
+    <div class="week-body">
+      <div class="week-objective">Objetivo — Practicar las tareas concretas de Speaking y Writing del STANAG</div>
+      <ul class="task-list">
+        <li>Speaking: presentación personal, familia, trabajo, rutinas, pasado reciente (BORE)</li>
+        <li>Speaking: describir una fotografía con el máximo detalle posible</li>
+        <li>Speaking: narrar eventos pasados con control de tiempos verbales</li>
+        <li>Writing: email informal — invitación, agradecimiento, disculpa</li>
+        <li>Writing: email formal — solicitud, informe breve, comunicación profesional</li>
+        <li>Writing: descripción de un proceso o situación, comparación de dos opciones</li>
+        <li>Práctica de circunlocución: describir palabras sin usarlas — 10 minutos diarios</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-header">
+      <div class="week-num">Semana 04</div>
+      <div class="week-title">Simulación</div>
+    </div>
+    <div class="week-body">
+      <div class="week-objective">Objetivo — Integrar todo en condiciones de examen</div>
+      <ul class="task-list">
+        <li>Un simulacro completo de las 4 destrezas en condiciones de tiempo real</li>
+        <li>Revisar la lista de errores de la Sección 3 antes de cada práctica</li>
+        <li>Reducir el tiempo de preparación — el objetivo es que las estrategias sean automáticas</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ── SECCIÓN 5 ── -->
+<div class="page">
+  <div class="section-number">Sección 05</div>
+  <h1>El día del examen</h1>
+
+  <p>Un candidato bien preparado no tiene sorpresas en sala. Sabe qué tareas le van a pedir, sabe cómo afrontarlas y sabe qué busca el evaluador en cada una. Eso es lo que produce calma — no la confianza ciega, sino el conocimiento concreto de lo que va a ocurrir.</p>
+
+  <h2>Lo que puedes llevar</h2>
+
+  <div class="highlight">
+    <p>Está permitido entrar con notas propias: <strong>vocabulario de los entornos temáticos del examen, estructuras gramaticales útiles, conectores</strong>. No es trampa — es preparación. Úsalo.</p>
+  </div>
+
+  <h2>La destreza que más nervios genera</h2>
+
+  <p>Speaking es donde más candidatos se bloquean. No siempre por falta de nivel — sino porque nunca han hecho el examen en condiciones reales. Han practicado solos, han leído, han escuchado, pero nunca han hablado delante de un evaluador que toma notas.</p>
+
+  <p>La solución no es estudiar más Speaking. Es enfrentarse a un simulacro real antes del examen — con un evaluador acreditado, en las mismas condiciones. Una sesión de ese tipo hace más que semanas de práctica en solitario: elimina el factor sorpresa, que es exactamente lo que genera el bloqueo.</p>
+
+  <h2>Si has seguido este plan, estás listo</h2>
+
+  <p>La preparación no garantiza el aprobado — lo que garantiza es que no fallarás por algo evitable. Los errores que cuestan el examen no son de nivel: son de ejecución, de estrategia y de desconocer cómo funciona la prueba. Eso es exactamente lo que cubre esta guía.</p>
+
+  <div class="cta-block">
+    <div class="cta-label">Siguiente paso</div>
+    <div class="cta-title">Sesión de Diagnóstico<br>con el Evaluador</div>
+    <p class="cta-text">30 minutos con un evaluador acreditado STANAG 6001. Sabrás exactamente dónde estás, qué puede hacerte fallar el día del examen y si necesitas más preparación antes de presentarte. Con garantía de devolución.</p>
+    <div class="cta-btn">slppass.es/sesion-diagnostico</div>
+    <div class="cta-detail">35€ · Videollamada · 30 min · Garantía de devolución</div>
+  </div>
+</div>
+
+</body>
+</html>
