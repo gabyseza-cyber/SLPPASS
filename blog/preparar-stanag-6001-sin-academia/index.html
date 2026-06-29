@@ -281,14 +281,12 @@ footer{background:var(--txb);padding:40px 5vw;text-align:center}
   burger.addEventListener('click',function(){menu.classList.toggle('open');burger.classList.toggle('open');});
 })();
 
-// Reemplaza con tu URL de Formspree: https://formspree.io/f/{ID}
-var SLP_EMAIL_ENDPOINT='https://formspree.io/f/mnjkzvgb';
 function slpEmailSubmit(e,form){
   e.preventDefault();
   var email=form.querySelector('input[type="email"]').value.trim();
   if(!email)return;
   var container=form.parentNode;
-  fetch(SLP_EMAIL_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email})})
+  fetch('https://api.convertkit.com/v3/forms/9625263/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({api_key:'ywzbzMS5Mxmf2W8ocbOr9g',email:email})})
   .finally(function(){form.style.display='none';container.querySelector('.email-success').style.display='block';});
 }
 window.gtag=window.gtag||function(){};

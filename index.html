@@ -1486,8 +1486,8 @@ document.getElementById('diagBtn').addEventListener('click', function() {
 });
 
 // ── EMAIL LEAD MAGNET ─────────────────────────────────────────────────────
-// Reemplaza esta URL con tu endpoint de Formspree: https://formspree.io/f/{ID}
-var SLP_EMAIL_ENDPOINT = 'https://formspree.io/f/mnjkzvgb';
+var SLP_KIT_FORM_ID = '9625263';
+var SLP_KIT_API_KEY = 'ywzbzMS5Mxmf2W8ocbOr9g';
 
 function slpGateEmailSubmit() {
   var email = document.getElementById('diagGateEmail').value.trim();
@@ -1504,15 +1504,17 @@ function slpGateEmailSubmit() {
 
   gtag('event','lead_email_submit',{location:'quiz_gate',source: source});
 
-  // Enviar email + datos del quiz a Formspree
-  fetch(SLP_EMAIL_ENDPOINT, {
+  fetch('https://api.convertkit.com/v3/forms/' + SLP_KIT_FORM_ID + '/subscribe', {
     method: 'POST',
-    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+    headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({
+      api_key: SLP_KIT_API_KEY,
       email: email,
-      perfil_objetivo: d.perfilLabel,
-      destreza_riesgo: d.destreza,
-      quiz_score: d.score
+      fields: {
+        perfil_objetivo: d.perfilLabel,
+        destreza_riesgo: d.destreza,
+        quiz_score: String(d.score)
+      }
     })
   });
 }
